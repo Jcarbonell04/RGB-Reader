@@ -1,5 +1,6 @@
 Project Proposal -
-Abstract
+
+**Abstract**
 
 -----
 
@@ -51,4 +52,5 @@ When PCBs arrive
 
 assemble, program, and test with current software.
 complete added features, assemble into case
+
 Check-off!
