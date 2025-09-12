@@ -1,2 +1,2 @@
-# CMPE2750_Template
-Use this template when creating your individual private repos.
+# CMPE2750 - Embedded System Design
+The course involves the design and construction of a simple microcontroller-based that responds to data collected from a chosen sensor. Participants will be guided in the selection and integration of components for a working prototype. All stages of implementation will be performed by the student including board design, component selection, population, and programming.
