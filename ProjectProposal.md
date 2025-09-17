@@ -2,7 +2,7 @@
 
 **Abstract**
 
-I will be attempting to create a small colour reader device. The RGB Reader will include a colour sensor to read the rgb values and oled sceen to display.
+I will be attempting to create a small colour reader device. The RGB Reader will include a colour sensor to read the rgb values and oled sceen to display. For the demo, I intend to to get paint sample strips of red, green, and, blue when I demo my reader.
 
 **Hardware**
 
@@ -37,7 +37,7 @@ If I enough time is permitted, I would like to try adding a RBG light to replica
 
 **Final Build**
 
-For my Final build, I would like to design and 3D Print a case for my RGB Reader. My main concern is that I do not have too much experience 3D printing, so I will have to do some research. For designing, I will the software [TinkerCAD](https://www.tinkercad.com/). I have used TinkerCAD before, but never got the chance or oppurtunity to physically print out anything. 
+For my Final build, I would like to design and 3D Print a case for my RGB Reader. My main concern is that I do not have too much experience 3D printing, so I will have to do some research. For designing, I will the software [TinkerCAD](https://www.tinkercad.com/). I have used TinkerCAD before, but never got the chance or oppurtunity to physically print out anything. I need to design my case to enclose the sensor in a way where amibient light does not affect the values read. For example, the warm cool lighting could affect the output by increasing the B value.
 
 The PCB will include the main components listed earlier. The only difference between the PCB build and the proof of life build the use of the Nucleo development board in the breadboard version. I will have to design my PCB and case to allocate space for the programmer, and other parts needed for it to work. More research needs to be done before I get to the case desgining.
 
@@ -66,6 +66,7 @@ When PCBs arrive:
 - [ ] complete added features, assemble into case
 
 Check-off!
+
 
 
 
