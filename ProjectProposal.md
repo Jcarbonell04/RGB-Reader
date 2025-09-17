@@ -1,4 +1,4 @@
-# Project Proposal - RGB Reader
+# Project Proposal - RGB Reader (I dont have a cool name </3)
 
 **Abstract**
 
@@ -66,6 +66,7 @@ When PCBs arrive:
 - [ ] complete added features, assemble into case
 
 Check-off!
+
 
 
 
