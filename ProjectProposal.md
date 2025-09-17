@@ -2,13 +2,15 @@
 
 **Abstract**
 
-I will be attempting to create a small colour reader device. The RGB Reader will include a colour sensor to read the values and oled sceen to display.
+I will be attempting to create a small colour reader device. The RGB Reader will include a colour sensor to read the rgb values and oled sceen to display.
 
 **Hardware**
 
 I have chosen the [STM32G031](https://www.digikey.ca/en/products/detail/stmicroelectronics/STM32G031K6T6/10300266?gclsrc=aw.ds&gad_source=1&gad_campaignid=17336435733&gbraid=0AAAAADrbLlg0N1Kd5EXrgzAC7LUfLDUnC&gclid=CjwKCAjwiY_GBhBEEiwAFaghvhG4pRAglKmtf1LMJkXjHH9BUgq6LzggdycpZ285lm5ClKIdZo-x5xoCx5gQAvD_BwE) as the microcontroller as there are resources given from the instructor to give me a soft start. I have not this microcontroller before, so I will have to do some research.
+Supply Voltage: 1.7 V to 3.6 V
 
 The RGB Reader will be based on a photoelectric/colour sensor. From a wide selection, I have chosen the [TCS34725 COLOR LIGHT-TO-DIGITAL CONVERTER](https://cdn-shop.adafruit.com/datasheets/TCS34725.pdf). I intend to use it because it contains an I<sup>2</sup>C interface, but seeing it is a popular choice with the STM32 gives me more confidence in choosing it. I do not have a library at the moment, but adafruit has library support for the arduino so I can start from there.
+Supply Voltage: 2.7 V to 3.6 V
 
 The display to the user will be a standard [SSD1306 128x64 I2C OLED display](https://www.amazon.ca/IZOKEE-Display-SSD1306-Raspberry-Yellow-Blue-IIC/dp/B076PNP2VD/ref=sr_1_4?crid=YXRJPVLMW9EL&dib=eyJ2IjoiMSJ9.OiybhU4XaNG6ShwJSbKTDJvkYVE5uWbfoGIpsV5YLpBxJZDEaTAqdDtPy0tWRoJ52zOXuq_cxh_j7TJz6rQsvuurKs-8koC1GKyBl8pSYDMVw_H9vG4T5x3UwTL4c-0G3metweLWxYmtzTT2dfp_ICcF3H6XFZ6SrumeL0oEe4TA_5mWreyuYLR2lQpLqmIKqqdcu85n4UoGaor2EPOOpFk7buL7VHgKdXirYBa8lvgnERpXD73-6vSLab_szAls09LM63wOs_da7XiV6JCm6I8Yke89vqq1vI80AT_NoQA.8lL2_YlI-GB7R8w4wl2GavAd1IDedNfI48C0q6DILyc&dib_tag=se&keywords=ssd1306&qid=1757697723&s=electronics&sprefix=ssd1306%2Celectronics%2C93&sr=1-4). I will be leveraging the libraries resourced from the class BrightSpace.
 
@@ -21,9 +23,9 @@ This device doesn't really need to be portable, so I can power it using a micro 
 **Research**
 
 Things I don't know, that I will need to do research on:
-- Using Segger, I haven't done it before. Might look up a tutorial when my nucleo board comes in
-- I have briefly looked at the TCS34725, all I saw was that it was poplular, uses I<sup>2</sup>C too
-- I need to look int ot he power supply, research more about LiPO batteries
+- Using [SEGGER](https://www.segger.com/downloads/embedded-studio/), I haven't done it before. I will need to refer to some tutorials to get started.
+- I have briefly looked at the TCS34725, all I saw was that it was poplular, uses I<sup>2</sup>C too. There are many resources on the internet for this specific sensor which gives me more confidence
+- I need to look into the power supply, research more about LiPO batteries
 
 **Proof of Concept**
 
@@ -35,32 +37,33 @@ If I enough time is permitted, I would like to try adding a RBG light to replica
 
 **Final Build**
 
-Lorem ipsum dolor sit amet. Ut atque Quis vel dicta accusantium qui fugiat earum eum quod porro! Ut quidem magnam ab autem tenetur ut porro similique aut sunt similique in corporis possimus. Qui mollitia tempore eum cupiditate autem et illum impedit! Vel iusto exercitationem in soluta ullam et vero suscipit et laboriosam facere?
+For my Final build, I would like to design and 3D Print a case for my RGB Reader. My main concern is that I do not have too much experience 3D printing, so I will have to do some research. For designing, I will the software [TinkerCAD](https://www.tinkercad.com/). I have used TinkerCAD before, but never got the chance or oppurtunity to physically print out anything. 
 
-In blanditiis molestiae non consequatur repellendus non illum quos vel adipisci temporibus in fugit laudantium non asperiores quos. Cum iusto nostrum qui perferendis voluptas et voluptatem corrupti? Ut obcaecati dicta ut quidem perspiciatis sit ipsa iste aut quisquam tenetur aut deleniti dolor est corrupti galisum vel possimus internos.
+The PCB will include the main components listed earlier. The only difference between the PCB build and the proof of life build the use of the Nucleo development board in the breadboard version. I will have to design my PCB and case to allocate space for the programmer, and other parts needed for it to work. More research needs to be done before I get to the case desgining.
+
 **Schedule**
-
-Week 1-2
+Week 1-2L:
 - [ ] Finalize Design
 - [ ] Procure proof-of-life components (MCU carrier, battery options)
 
-Week 3-4
+Week 3-4:
 - [ ] Assemble proof-of-life components
 - [ ] Master toolchain, begin software development
 
-Week 5-6
+Week 5-6:
 - [ ] Finalize design, complete initial software design
 
-Week 7-9
+Week 7-9:
 - [ ] Complete PCB design, software essentially complete
 - [ ] Complete dimensions for case know, begin 3D case design around PCB dimensions
 
-Week 10
+Week 10:
 - [ ] Send out PCB design for manufacture
 
-When PCBs arrive
+When PCBs arrive:
 - [ ] assemble, program, and test with current software.
 - [ ] complete added features, assemble into case
 
 Check-off!
+
 
