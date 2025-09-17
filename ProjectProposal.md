@@ -25,7 +25,7 @@ This device doesn't really need to be portable, so I can power it using a micro 
 Things I don't know, that I will need to do research on:
 - Using [SEGGER](https://www.segger.com/downloads/embedded-studio/), I haven't done it before. I will need to refer to some tutorials to get started.
 - I have briefly looked at the TCS34725, all I saw was that it was poplular, uses I<sup>2</sup>C too. There are many resources on the internet for this specific sensor which gives me more confidence
-- I need to look into the power supply, research more about LiPO batteries
+- MAYBE look into a portable power supply, research more about LiPO batteries
 
 **Proof of Concept**
 
@@ -66,6 +66,7 @@ When PCBs arrive:
 - [ ] complete added features, assemble into case
 
 Check-off!
+
 
 
 
