@@ -15,18 +15,18 @@ Supply Voltage: 2.7 V to 3.6 V
 The display to the user will be a standard [SSD1306 128x64 I2C OLED display](https://www.amazon.ca/IZOKEE-Display-SSD1306-Raspberry-Yellow-Blue-IIC/dp/B076PNP2VD/ref=sr_1_4?crid=YXRJPVLMW9EL&dib=eyJ2IjoiMSJ9.OiybhU4XaNG6ShwJSbKTDJvkYVE5uWbfoGIpsV5YLpBxJZDEaTAqdDtPy0tWRoJ52zOXuq_cxh_j7TJz6rQsvuurKs-8koC1GKyBl8pSYDMVw_H9vG4T5x3UwTL4c-0G3metweLWxYmtzTT2dfp_ICcF3H6XFZ6SrumeL0oEe4TA_5mWreyuYLR2lQpLqmIKqqdcu85n4UoGaor2EPOOpFk7buL7VHgKdXirYBa8lvgnERpXD73-6vSLab_szAls09LM63wOs_da7XiV6JCm6I8Yke89vqq1vI80AT_NoQA.8lL2_YlI-GB7R8w4wl2GavAd1IDedNfI48C0q6DILyc&dib_tag=se&keywords=ssd1306&qid=1757697723&s=electronics&sprefix=ssd1306%2Celectronics%2C93&sr=1-4). I will be leveraging the libraries resourced from the class BrightSpace.
 
 Supply Voltage: The logic and I2C interface for the SSD1306 typically operate at 3.3V or 5V. 
-Panel Voltage: The OLED panel itself requires a higher voltage, usually between 7V and 15V, to light  the pixels. 
+Panel Voltage: The OLED panel itself requires a higher voltage, usually between 7V and 15V, to light  the pixels. (STILL IT ONLY NEEDS 5V)
 Onboard Circuitry: Many SSD1306 boards include an integrated charge pump or boost regulator, which takes the input voltage and generates the higher voltage needed by the panel. 
 
-This device doesn't really need to be portable, so I can power it using a micro usb. However, I will still do research for the power options.
+This device doesn't really need to be portable, so I can power it using a micro usb.
 
 **Research**
 
 Things I don't know, that I will need to do research on:
 - Using [SEGGER](https://www.segger.com/downloads/embedded-studio/), I haven't done it before. I will need to refer to some tutorials to get started.
 - I have briefly looked at the TCS34725, all I saw was that it was poplular, uses I<sup>2</sup>C too. There are many resources on the internet for this specific sensor which gives me more confidence
-- MAYBE look into a portable power supply, research more about LiPO batteries
-
+- I will need to research how to implement a micro usb plug in for my design. I will need it to program and power my microcontroller
+  
 **Proof of Concept**
 
 For my proof-of-life build, I will be using a development board that fits into a breadboard. I have chosen the presxisting [NUCLEO-G031K8](https://www.digikey.ca/en/products/detail/stmicroelectronics/NUCLEO-G031K8/10321671?s=N4IgTCBcDaIHIFcDGAbApgewAQHEAMAzAIwgC6AvkA) for my build. This will be powered with a USB connector from a host pc. I probably have a cable for this at home
@@ -66,6 +66,7 @@ When PCBs arrive:
 - [ ] complete added features, assemble into case
 
 Check-off!
+
 
 
 
