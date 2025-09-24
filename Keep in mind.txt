@@ -1,0 +1,15 @@
+general checklist
+
+indicate you arent using a pin in schematic
+when orgainzing in a line actually use a bus
+use net labels, or set global labels
+grounds and power can be separate, not not have them going to one
+no wires crossing labels
+annotate everything, if a usb is plugged into something write that
+if youre using i2c, need to see the bus scan (on oled, on debug console)
+
+libs have chanegd to 
+
+
+silkscreenof nucleo can show you the arduino pinouts , they aere in the silk screen, but not usedful for us)
+
