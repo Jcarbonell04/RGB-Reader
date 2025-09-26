@@ -1,7 +1,7 @@
 // Basic STM32G031 Demo ADXL343 Basic Operations
 // Core clock is 64MHz
 //
-// This requires the I2C1 config on pins PB6/PB7 (d0 and d1)
+// This requires the I2C1 config on pins PB6(D0)/PB7(D1) (C and D)
 // This demo uses the serial port for information output
 // I2C Bus pull-ups are required.
 //
@@ -117,7 +117,7 @@ void _OneTimeInits(void)
 
   // I2C Stuff
   _USART2_TxStringXY(1, 2, "starting I2C bus...");
-  _I2C1_Init ();
+  _I2C1_Init_PB67 (_I2C_SpeedMode_100);
   _USART2_TxStringXY(1, 3, "I2C bus started...");
 
   // one-time accelerometer start

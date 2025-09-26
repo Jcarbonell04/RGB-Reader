@@ -8,7 +8,7 @@
 //////////////////////////////////////
 
 #include "stm32g031xx.h"
-#include "cmsis_gcc.h"
+// #include "cmsis_gcc.h" not used incode
 
 #include <stdio.h>
 #include "gpio.h"
@@ -44,32 +44,35 @@ int main(void)
         _USART2_TxStringXY(1, iLine++, buff);
         // or print to debug console
         printf("%s\r\n", buff);
+        _SSD1306_StringXY(0, 1, buff);
+        _SSD1306_Render();
+
       }
     }
   }
 
-  // begin main program loop
-  int iFastCounter = 0;
-  int iSlowCounter = 0;
-  do
-  { 
-    // count at long count intervals
-    if (!(iFastCounter++ % 1000000))
-    {
-      // every 1M iterations:
-      char buff[80];
-      (void)sprintf(buff, "Count is %d", iSlowCounter++);
-      _SSD1306_StringXY(0, 1, buff);
+  //// begin main program loop
+  //int iFastCounter = 0;
+  //int iSlowCounter = 0;
+  //do
+  //{ 
+  //  // count at long count intervals
+  //  if (!(iFastCounter++ % 1000000))
+  //  {
+  //    // every 1M iterations:
+  //    char buff[80];
+  //    (void)sprintf(buff, "Count is %d", iSlowCounter++);
+  //    _SSD1306_StringXY(0, 1, buff);
       
-      // perform display inversion every 10 counts
-      if (!(iSlowCounter % 10))
-        _SSD1306_SetInverse(iSlowCounter / 10 % 2);
+  //    // perform display inversion every 10 counts
+  //    if (!(iSlowCounter % 10))
+  //      _SSD1306_SetInverse(iSlowCounter / 10 % 2);
       
-      // cause changes to be rendered on the device
-      _SSD1306_Render();
-    }
-  }
-  while (1);
+  //    // cause changes to be rendered on the device
+  //    _SSD1306_Render();
+  //  }
+  //}
+  //while (1);
 }
 
 void _OneTimeInits(void)
@@ -85,7 +88,7 @@ void _OneTimeInits(void)
 
   // I2C Stuff
   _USART2_TxStringXY(1, 3, "starting I2C bus...");
-  _I2C1_Init ();
+  _I2C1_Init_PB67(100);
   _USART2_TxStringXY(1, 4, "I2C bus started...");
 
   // one-time OLED init

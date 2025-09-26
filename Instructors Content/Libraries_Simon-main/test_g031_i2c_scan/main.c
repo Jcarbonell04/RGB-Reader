@@ -79,7 +79,7 @@ void _OneTimeInits(void)
 
   // I2C Stuff
   _USART2_TxStringXY(1, 3, "starting I2C bus...");
-  _I2C1_Init ();
+  _I2C1_Init_PB67(_I2C_SpeedMode_100);
   _USART2_TxStringXY(1, 4, "I2C bus started...");
 
   //// setup a basic timer

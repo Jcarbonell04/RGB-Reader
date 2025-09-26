@@ -28,6 +28,7 @@
 //      |   |AI1---PA15|   |
 //      |   |          |   |
 //      -----          -----
+// on the NUCLEO, remember to remove the jumper on gnd/d2(PA15) that it ships with for the demo
 
 // this flag is set by an interrupt ISR when the ADXL343 reports an interrupt on the AI1 line
 // the AI1 line is connected to the MCU on pin PA15, which is configured to interrupt on
@@ -161,7 +162,7 @@ void _OneTimeInits(void)
 
   // I2C Stuff
   _USART2_TxStringXY(1, 2, "starting I2C bus...");
-  _I2C1_Init ();
+  _I2C1_Init_PB67 (_I2C_SpeedMode_100);
   _USART2_TxStringXY(1, 3, "I2C bus started...");
 
   // one-time accelerometer start
@@ -175,40 +176,21 @@ void _OneTimeInits(void)
 
   // configure PA15 to be an interrupt
   // EXTICR already defaults to PA15 as line EXTI15 input in configurable mode RM0444::13.3.3
-  //EXTI->EXTICR[0]
-
-  //_GPIO_SetPinMode (GPIOA, 0, _GPIO_PinMode_Input); 
-  //_GPIO_SetPinMode (GPIOA, 1, _GPIO_PinMode_Input); 
   
   // set CPU wakeup on EXTI15 line - RM0444::13.5.12
   EXTI->IMR1 |= EXTI_IMR1_IM15_Msk;
-  //EXTI->IMR1 |= EXTI_IMR1_IM0_Msk;
-  //EXTI->IMR1 |= EXTI_IMR1_IM1_Msk;
   
   // configure for rising edge on line EXTI15 - RM0444::13.5.1
   EXTI->RTSR1 |= EXTI_RTSR1_RT15_Msk;
-  //EXTI->RTSR1 |= EXTI_RTSR1_RT0_Msk;
-  //EXTI->RTSR1 |= EXTI_RTSR1_RT1_Msk;
   
   // event unmask (not necessary here, the interrupt is enough)
   //EXTI->EMR1 |= EXTI_EMR1_EM15_Msk;
   
   // enable the IRQ for this type of interrupt
   NVIC_EnableIRQ (EXTI4_15_IRQn);
-  //NVIC_EnableIRQ (EXTI0_1_IRQn);
 
   // enable interrupts in general
   __enable_irq();
-}
-
-void EXTI0_1_IRQHandler (void)
-{
-  // need to differentiate flags before clearing (two sources for this channel)
-  //EXTI->RPR1 = EXTI_RPR1_RPIF0_Msk;
-  //EXTI->RPR1 = EXTI_RPR1_RPIF1_Msk;
-
-  // clear the pending interrupt request
-  //NVIC_ClearPendingIRQ (EXTI0_1_IRQn);
 }
 
 // ISR for interrupt source EXTI15 (configured as a PA15 rising edge trigger interrupt)

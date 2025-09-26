@@ -1,6 +1,6 @@
 # STM32
 Libraries for STM32 projects.\
-These libraries were initially written for the G041 targets, but have been modified to work with the G031 variants.
+These libraries were initially written for the G041/L476 targets, but have been modified to work with the G031 variants.
 
 ## These libraries are intended for use in CMPE2750 only. Do not distribute these libraries.
 
@@ -8,15 +8,16 @@ This repo is a work in progress, and the code within is provided 'as is' - use a
 
 These libraries are under active maintenance, and may change without notice.
 
-The `lib` folder contains device agnostic libraries that rely on device specific libraries.
-
-The `libG041` folder contains the G041/G031 device specific libraries. 
+The `lib` folder contains class and device specific libraries.
 
 OCT 09 2024 - Major fix to I2C Library, added VEML7700 library
 
 FEB 07 2025 - Updates to many libraries to create demos. I2C lib updated to include 'unstick' code for interrupted bus.
 
 FEB 14 2025 - Added demos.
+
+SEP 22 2025 - updated list of examples to match lib changes
+            - added BME280 example
 
 DEMOS:
 
@@ -33,3 +34,9 @@ DEMOS:
 `test_g031_a_to_d` -> demo of A/D read.
 
 `test_g031_timer_pwm` -> demo of PWM with TIM3::CH1, with pin output. 
+
+`test_g031_gpio` -> general GPIO lib example (used in many other demos)
+
+`test_g031_i2c_bme280` -> demo of startup / operation of the BME280
+
+`test_g031_rotary_enc_int` -> demo of standard rotary encoder with interrupts demo

@@ -1,0 +1,97 @@
+// Basic STM32G031 Demo for GPIO
+// Blink a LED on PA3 every 500ms
+// Core clock is 64MHz
+//
+// Using Simon's Libraries
+//////////////////////////////////////
+
+#include "stm32g031xx.h"
+#include "cmsis_gcc.h"
+
+#include <stdio.h>
+#include "gpio.h"
+#include "pll.h"
+#include "usart.h"
+
+// a global counter for the timer interrupt
+//  that will count at 100ms intervals
+volatile long _GlobalCounter = 0;
+
+// perform one-time initializations before the main loop
+void _OneTimeInits(void);
+
+int main(void)
+{
+  // device should be running on HSI / 1 so 16MHz
+  // not using external 32kHz XTAL yet
+  // kick it up to 64MHz
+  _PLL_To_64();
+
+  // perform one-time startups for the program, but at full speed
+  _OneTimeInits();  
+
+  // begin main program loop
+  do
+  { 
+    // wait for an interrupt:
+    // sources :: 100ms tim2 interrupt
+    __WFI();
+
+    // print interrupt count to the debug console if debugging
+    //printf ("Interrupt count: %d\r\n", _GlobalCounter);
+
+    // LED blinking, on 100ms, off 400ms
+    if (!(_GlobalCounter % 5))
+      _GPIO_PinSet (GPIOA, 3);
+    else
+      _GPIO_PinClear (GPIOA, 3);
+  }
+  while (1);
+}
+
+void _OneTimeInits(void)
+{
+  // turn on GPIO clock for Port A - can't do anything on PORTA without this
+  RCC->IOPENR |= RCC_IOPENR_GPIOAEN;
+
+  // you can set any pin you want, just ensure that the peripheral clock
+  //  for the port is turned on first!
+
+  // set pin PA3 as an output
+  _GPIO_SetPinMode(GPIOA, 3, _GPIO_PinMode_Output);
+
+  // PC6 is user LED on NUCLEO, so turn on peripheral clock for port c
+  // RCC->IOPENR |= RCC_IOPENR_GPIOCEN;
+  // _GPIO_SetPinMode (GPIOC, 6, _GPIO_PinMode_Output); 
+
+  // bring up the serial port, 38400 BAUD currently on VCOM through programmer
+  _USART2_Init(64E6, 38400);
+  _USART2_ClearScreen();
+
+  _USART2_TxStringXY(1, 1, "USART started...");
+
+  // setup a basic timer
+  _USART2_TxStringXY(1, 8, "starting timer interrupt...");  
+  RCC->APBENR1 |= RCC_APBENR1_TIM2EN_Msk; // turn on timer 2
+  TIM2->CR1 = TIM_CR1_URS_Msk;            // overflow/underflow only
+  TIM2->ARR = 6400000;                    // 100ms (current prescale is 1)
+  TIM2->DIER |= TIM_DIER_UIE_Msk;
+  TIM2->CR1 |= TIM_CR1_CEN_Msk;
+
+  NVIC_EnableIRQ (TIM2_IRQn);
+  __enable_irq();
+  _USART2_TxStringXY(1, 9, "timer interrupt started...");
+}
+
+void TIM2_IRQHandler (void)
+{
+  TIM2->SR = ~TIM_SR_UIF_Msk; // these are rc_w0 bits, so direct assignment is required
+
+  // clear the pending interrupt request
+  NVIC_ClearPendingIRQ (TIM2_IRQn);
+
+  // count this tick
+  ++_GlobalCounter;
+}
+
+
