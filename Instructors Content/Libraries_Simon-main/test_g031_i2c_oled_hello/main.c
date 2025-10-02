@@ -32,6 +32,7 @@ int main(void)
 
   // I2C bus scan to see what devices are reporting in
   {
+    // moved to main loop
     unsigned char pData[128] = {0};
     _I2C1_BusScan(pData);
     int iLine = 5;
@@ -44,35 +45,27 @@ int main(void)
         _USART2_TxStringXY(1, iLine++, buff);
         // or print to debug console
         printf("%s\r\n", buff);
-        _SSD1306_StringXY(0, 1, buff);
-        _SSD1306_Render();
 
       }
+      //else
+      //{
+      //  char buff[80] = {0};
+      //  (void)sprintf (buff, "No Device Found! ", i);
+      //  _USART2_TxStringXY(1, iLine++, buff);
+      //  // or print to debug console
+      //  printf("%s\r\n", buff);
+      //}
     }
   }
 
-  //// begin main program loop
-  //int iFastCounter = 0;
-  //int iSlowCounter = 0;
-  //do
-  //{ 
-  //  // count at long count intervals
-  //  if (!(iFastCounter++ % 1000000))
-  //  {
-  //    // every 1M iterations:
-  //    char buff[80];
-  //    (void)sprintf(buff, "Count is %d", iSlowCounter++);
-  //    _SSD1306_StringXY(0, 1, buff);
-      
-  //    // perform display inversion every 10 counts
-  //    if (!(iSlowCounter % 10))
-  //      _SSD1306_SetInverse(iSlowCounter / 10 % 2);
-      
-  //    // cause changes to be rendered on the device
-  //    _SSD1306_Render();
-  //  }
-  //}
-  //while (1);
+  // begin main program loop
+  // variables used in the main loop are created here 
+  do
+  { 
+    // do somethig here
+    
+  }
+  while (1);
 }
 
 void _OneTimeInits(void)
