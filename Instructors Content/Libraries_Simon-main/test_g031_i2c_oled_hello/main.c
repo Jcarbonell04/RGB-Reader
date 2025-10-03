@@ -15,7 +15,7 @@
 #include "pll.h"
 #include "usart.h"
 #include "i2c.h"
-#include "SSD1306.h"
+ #include "SSD1306.h"
 
 // perform one-time initializations before the main loop
 void _OneTimeInits(void);
@@ -45,8 +45,8 @@ int main(void)
         _USART2_TxStringXY(1, iLine++, buff);
         // or print to debug console
         printf("%s\r\n", buff);
-        //_SSD1306_StringXY(0, 1, buff);
-        //_SSD1306_Render();
+        _SSD1306_StringXY(0, 1, buff);
+        _SSD1306_Render();
 
       }
       //else
