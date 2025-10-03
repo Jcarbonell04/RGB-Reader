@@ -45,6 +45,8 @@ int main(void)
         _USART2_TxStringXY(1, iLine++, buff);
         // or print to debug console
         printf("%s\r\n", buff);
+        //_SSD1306_StringXY(0, 1, buff);
+        //_SSD1306_Render();
 
       }
       //else
