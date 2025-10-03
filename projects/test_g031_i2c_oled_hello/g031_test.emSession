@@ -2,6 +2,7 @@
 <session>
  <Bookmarks/>
  <Breakpoints groups="Breakpoints" active_group="Breakpoints">
+  <BreakpointListItem trigger="" line="14" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" stopAll="false" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="74" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" stopAll="false" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
   <Exceptions set="HardFault"/>
  </Breakpoints>
@@ -68,8 +69,10 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="13" y="13" useTextEdit="1" path="main.c" left="0" selected="1" top="51" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="30" y="32" useTextEdit="1" path="main.c" left="0" selected="1" top="16" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="25" y="199" useTextEdit="1" path="SEGGER_THUMB_Startup.s" left="0" top="186" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="12" y="11" useTextEdit="1" path="../../Lib/gpio.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../Lib/gpio.h" left="0" top="0" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="g031_test" fileDialogDefaultFilter="*.c" autoConnectTarget="ST-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="D:/GitHub/STM32_Projects/lib" debugSearchPath="" autoConnectCapabilities="3455"/>
 </session>
