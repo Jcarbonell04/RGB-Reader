@@ -16,6 +16,7 @@
 #include "usart.h"
 #include "i2c.h"
 #include "SSD1306.h"
+#include "TCS34725.h"
 
 // perform one-time initializations before the main loop
 void _OneTimeInits(void);
@@ -49,14 +50,6 @@ int main(void)
         _SSD1306_Render();
 
       }
-      //else
-      //{
-      //  char buff[80] = {0};
-      //  (void)sprintf (buff, "No Device Found! ", i);
-      //  _USART2_TxStringXY(1, iLine++, buff);
-      //  // or print to debug console
-      //  printf("%s\r\n", buff);
-      //}
     }
   }
 
