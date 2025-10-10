@@ -1,15 +1,13 @@
-// Basic STM32G031 Demo SSD1306 Basic Output
+// Proof of Life - Reading I2C addresses on SSD1306(oled display) and TCS34725(colour sensor)
 // Core clock is 64MHz
 //
 // This requires the I2C1 config on pins PB6/PB7 (d0 and d1)
 // I2C Bus pull-ups are required.
 //
-// Using Simon's Libraries
 //////////////////////////////////////
 
+// define library headers here
 #include "stm32g031xx.h"
-// #include "cmsis_gcc.h" not used incode
-
 #include <stdio.h>
 #include "gpio.h"
 #include "pll.h"
@@ -33,7 +31,14 @@ int main(void)
 
   // I2C bus scan to see what devices are reporting in
   {
-    // moved to main loop
+        // moved to main loop
+  }
+
+  // begin main program loop
+  // variables used in the main loop are created here 
+  do
+  { 
+    // do somethig here
     unsigned char pData[128] = {0};
     _I2C1_BusScan(pData);
     int iLine = 5;
@@ -46,19 +51,10 @@ int main(void)
         _USART2_TxStringXY(1, iLine++, buff);
         // or print to debug console
         printf("%s\r\n", buff);
-        _SSD1306_StringXY(0, 1, buff);
+        _SSD1306_StringXY(0, 0, buff);
         _SSD1306_Render();
-
       }
     }
-  }
-
-  // begin main program loop
-  // variables used in the main loop are created here 
-  do
-  { 
-    // do somethig here
-    
   }
   while (1);
 }

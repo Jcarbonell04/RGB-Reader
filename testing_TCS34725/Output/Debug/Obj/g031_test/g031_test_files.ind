@@ -4,6 +4,7 @@
 "Output/Debug/Obj/g031_test/main.o"
 "Output/Debug/Obj/g031_test/pll.o"
 "Output/Debug/Obj/g031_test/SSD1306.o"
+"Output/Debug/Obj/g031_test/TCS34725.o"
 "Output/Debug/Obj/g031_test/usart.o"
 "Output/Debug/Obj/g031_test/SEGGER_THUMB_Startup.o"
 "Output/Debug/Obj/g031_test/stm32g031xx_Vectors.o"
