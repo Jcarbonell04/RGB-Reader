@@ -44,8 +44,8 @@ The PCB will include the main components listed earlier. The only difference bet
 **Schedule**
 
 Week 1-2:
-- [ ] Finalize Design (Project Proposal)
-- [ ] Procure proof-of-life components (MCU carrier, battery options)
+- [x] Finalize Design (Project Proposal)
+- [x] Procure proof-of-life components (MCU carrier, battery options)
 
 Week 3-4:
 - [ ] Assemble proof-of-life components
