@@ -1,65 +1,89 @@
-//#include "TCS34725.h"
+#include "tcs34725.h"
+#include "i2c.h"
+//#include <math.h>
 
-////static void tcs34725_write8(TCS34725_HandleTypeDef *sensor, uint8_t reg, uint8_t value) {
-////    uint8_t data[2] = { TCS34725_COMMAND_BIT | reg, value };
-////    HAL_I2C_Master_Transmit(sensor->i2c, TCS34725_ADDRESS, data, 2, HAL_MAX_DELAY);
-////}
+// -----------------------------------------------------------------------------
+// Low-level I2C helpers using your _I2C1_* functions
+// -----------------------------------------------------------------------------
+static void TCS34725_Write8(uint8_t addr, uint8_t reg, uint8_t val)
+{
+    uint8_t data[2] = { TCS34725_COMMAND_BIT | reg, val };
+    _I2C1_StartWrite(addr, 2, data, _I2C_AutoEnd_Hardware);
+}
 
-////static uint8_t tcs34725_read8(TCS34725_HandleTypeDef *sensor, uint8_t reg) {
-////    uint8_t tx = TCS34725_COMMAND_BIT | reg;
-////    uint8_t rx;
-////    HAL_I2C_Master_Transmit(sensor->i2c, TCS34725_ADDRESS, &tx, 1, HAL_MAX_DELAY);
-////    HAL_I2C_Master_Receive(sensor->i2c, TCS34725_ADDRESS, &rx, 1, HAL_MAX_DELAY);
-////    return rx;
-////}
+static uint8_t TCS34725_Read8(uint8_t addr, uint8_t reg)
+{
+    uint8_t cmd = TCS34725_COMMAND_BIT | reg;
+    uint8_t val;
+    _I2C1_StartWrite(addr, 1, &cmd, _I2C_AutoEnd_Software);
+    _I2C1_StartRead(addr, 1, &val, _I2C_AutoEnd_Hardware);
+    return val;
+}
 
-////static uint16_t tcs34725_read16(TCS34725_HandleTypeDef *sensor, uint8_t reg) {
-////    uint8_t tx = TCS34725_COMMAND_BIT | reg;
-////    uint8_t rx[2];
-////    HAL_I2C_Master_Transmit(sensor->i2c, TCS34725_ADDRESS, &tx, 1, HAL_MAX_DELAY);
-////    HAL_I2C_Master_Receive(sensor->i2c, TCS34725_ADDRESS, rx, 2, HAL_MAX_DELAY);
-////    return (rx[1] << 8) | rx[0];
-////}
+static uint16_t TCS34725_Read16(uint8_t addr, uint8_t reg)
+{
+    uint8_t cmd = TCS34725_COMMAND_BIT | reg;
+    uint8_t buf[2];
+    _I2C1_StartWrite(addr, 1, &cmd, _I2C_AutoEnd_Software);
+    _I2C1_StartRead(addr, 2, buf, _I2C_AutoEnd_Hardware);
+    return (uint16_t)(buf[1] << 8 | buf[0]);
+}
 
-////static void tcs34725_enable(TCS34725_HandleTypeDef *sensor) {
-////    tcs34725_write8(sensor, TCS34725_ENABLE, TCS34725_ENABLE_PON);
-////    HAL_Delay(3);
-////    tcs34725_write8(sensor, TCS34725_ENABLE, TCS34725_ENABLE_PON | TCS34725_ENABLE_AEN);
-////    HAL_Delay(50);
-////}
+// -----------------------------------------------------------------------------
+// Public functions
+// -----------------------------------------------------------------------------
+bool _TCS34725_Init(TCS34725_t *dev)
+{
+    dev->address = TCS34725_ADDRESS;
+    dev->integrationTime = 0xEB; // default 50 ms
+    dev->gain = 0x01;            // 4x gain
 
-////static void tcs34725_disable(TCS34725_HandleTypeDef *sensor) {
-////    uint8_t reg = tcs34725_read8(sensor, TCS34725_ENABLE);
-////    tcs34725_write8(sensor, TCS34725_ENABLE, reg & ~(TCS34725_ENABLE_PON | TCS34725_ENABLE_AEN));
-////}
+    uint8_t id = TCS34725_Read8(dev->address, TCS34725_ID);
+    if (id == 0x00 || id == 0xFF)
+        return false;  // sensor not found
 
-////HAL_StatusTypeDef tcs34725_init(TCS34725_HandleTypeDef *sensor, I2C_HandleTypeDef *hi2c) {
-////    sensor->i2c = hi2c;
-////    sensor->initialized = 0;
+    dev->initialized = true;
 
-////    uint8_t id = tcs34725_read8(sensor, TCS34725_ID);
-////    if (id != 0x44 && id != 0x10) {
-////        return HAL_ERROR;
-////    }
+    TCS34725_Write8(dev->address, TCS34725_ATIME, dev->integrationTime);
+    TCS34725_Write8(dev->address, TCS34725_CONTROL, dev->gain);
+    _TCS34725_Enable(dev);
 
-////    sensor->initialized = 1;
-////    tcs34725_setIntegrationTime(sensor, TCS34725_INTEGRATIONTIME_50MS);
-////    tcs34725_setGain(sensor, TCS34725_GAIN_4X);
-////    tcs34725_enable(sensor);
-////    return HAL_OK;
-////}
+    return true;
+}
 
-////void tcs34725_setIntegrationTime(TCS34725_HandleTypeDef *sensor, uint8_t time) {
-////    if (!sensor->initialized) return;
-////    tcs34725_write8(sensor, TCS34725_ATIME, time);
-////}
+void _TCS34725_Enable(TCS34725_t *dev)
+{
+    TCS34725_Write8(dev->address, TCS34725_ENABLE, TCS34725_ENABLE_PON);
+    for (volatile int i = 0; i < 10000; i++); // ~3ms delay
+    TCS34725_Write8(dev->address, TCS34725_ENABLE, TCS34725_ENABLE_PON | TCS34725_ENABLE_AEN);
+}
 
-////void tcs34725_setGain(TCS34725_HandleTypeDef *sensor, uint8_t gain) {
-////    if (!sensor->initialized) return;
-////    tcs34725_write8(sensor, TCS34725_CONTROL, gain);
-////}
+void _TCS34725_GetRawData(TCS34725_t *dev, uint16_t *r, uint16_t *g, uint16_t *b, uint16_t *c)
+{
+    *c = TCS34725_Read16(dev->address, TCS34725_CDATAL);
+    *r = TCS34725_Read16(dev->address, TCS34725_RDATAL);
+    *g = TCS34725_Read16(dev->address, TCS34725_GDATAL);
+    *b = TCS34725_Read16(dev->address, TCS34725_BDATAL);
+}
 
-////void tcs34725_getRawData(TCS34725_HandleTypeDef *sensor, uint16_t *r, uint16_t *g, uint16_t *b, uint16_t *c) {
-////    if (!sensor->initialized) return;
+uint16_t _TCS34725_CalculateLux(uint16_t r, uint16_t g, uint16_t b)
+{
+    float lux = (-0.32466f * r) + (1.57837f * g) + (-0.73191f * b);
+    if (lux < 0) lux = 0;
+    return (uint16_t)lux;
+}
 
-////    *c = tcs34725_read16(sensor, TCS34725_*
+uint16_t _TCS34725_CalculateColorTemp(uint16_t r, uint16_t g, uint16_t b)
+{
+    float X = (-0.14282f * r) + (1.54924f * g) + (-0.95641f * b);
+    float Y = (-0.32466f * r) + (1.57837f * g) + (-0.73191f * b);
+    float Z = (-0.68202f * r) + (0.77073f * g) + (0.56332f * b);
+
+    float xc = X / (X + Y + Z);
+    float yc = Y / (X + Y + Z);
+    float n = (xc - 0.3320f) / (0.1858f - yc);
+
+    float cct = (449.0f * n * n * n) + (3525.0f * n * n) + (6823.3f * n) + 5520.33f;
+    if (cct < 0) cct = 0;
+    return (uint16_t)cct;
+}

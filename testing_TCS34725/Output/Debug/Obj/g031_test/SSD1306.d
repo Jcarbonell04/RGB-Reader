@@ -1,7 +1,6 @@
 Output/Debug/Obj/g031_test/SSD1306.o: \
-  C:\Users\jcarb\Documents\GitHub\CMPE2750\lib\SSD1306.c \
-  C:\Users\jcarb\Documents\GitHub\CMPE2750\lib\i2c.h \
-  C:\Users\jcarb\Documents\GitHub\CMPE2750\lib\SSD1306.h \
+  C:\Users\jcarb\Documents\GitHub\CMPE2750\testing_TCS34725\SSD1306.c \
+  ..\lib\i2c.h ..\lib\SSD1306.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.24\include\stdlib.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.24\include\__SEGGER_RTL.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.24\include\__SEGGER_RTL_ConfDefaults.h \

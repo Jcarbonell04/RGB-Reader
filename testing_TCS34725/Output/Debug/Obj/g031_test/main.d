@@ -16,4 +16,5 @@ Output/Debug/Obj/g031_test/main.o: \
   ..\lib\gpio.h \
   C:\Users\jcarb\Documents\GitHub\CMPE2750\testing_TCS34725\STM32G0xx\Device\Include\stm32g0xx.h \
   ..\lib\pll.h ..\lib\usart.h ..\lib\i2c.h ..\lib\SSD1306.h \
-  ..\lib\TCS34725.h
+  ..\lib\TCS34725.h \
+  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.24\include\stdbool.h

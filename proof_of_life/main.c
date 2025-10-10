@@ -1,0 +1,82 @@
+// Proof of Life - Reading I2C addresses on SSD1306(oled display) and TCS34725(colour sensor)
+// Core clock is 64MHz
+//
+// This requires the I2C1 config on pins PB6/PB7 (d0 and d1)
+// I2C Bus pull-ups are required.
+//
+//////////////////////////////////////
+
+// define library headers here
+#include "stm32g031xx.h"
+#include <stdio.h>
+#include "gpio.h"
+#include "pll.h"
+#include "usart.h"
+#include "i2c.h"
+#include "SSD1306.h"
+#include "TCS34725.h"
+
+// perform one-time initializations before the main loop
+void _OneTimeInits(void);
+
+int main(void)
+{
+  // device should be running on HSI / 1 so 16MHz
+  // not using external 32kHz XTAL yet
+  // kick it up to 64MHz
+  _PLL_To_64();
+
+  // perform one-time startups for the program, but at full speed
+  _OneTimeInits();  
+
+  // I2C bus scan to see what devices are reporting in
+  {
+        // moved to main loop
+  }
+
+  // begin main program loop
+  // variables used in the main loop are created here 
+  do
+  { 
+    // do somethig here
+    unsigned char pData[128] = {0};
+    _I2C1_BusScan(pData);
+    int iLine = 5;
+    for (int i = 0; i < 128; ++i)
+    {
+      if (pData[i])
+      {
+        char buff[80] = {0};
+        (void)sprintf (buff, "Device found at 7-bit address: %2.2X ", i);
+        _USART2_TxStringXY(1, iLine++, buff);
+        // or print to debug console
+        printf("%s\r\n", buff);
+        _SSD1306_StringXY(0, 0, buff);
+        _SSD1306_Render();
+      }
+    }
+  }
+  while (1);
+}
+
+void _OneTimeInits(void)
+{
+  // turn on GPIO clock for Port A - can't do anything without this
+  RCC->IOPENR |= RCC_IOPENR_GPIOAEN;
+
+  // bring up the serial port, 38400 BAUD currently on VCOM through programmer
+  _USART2_Init(64E6, 38400);
+  _USART2_ClearScreen();
+
+  _USART2_TxStringXY(1, 1, "USART started...");
+
+  // I2C Stuff
+  _USART2_TxStringXY(1, 3, "starting I2C bus...");
+  _I2C1_Init_PB67(100);
+  _USART2_TxStringXY(1, 4, "I2C bus started...");
+
+  // one-time OLED init
+  _SSD1306_DispInit(_SSD1306_OR_UP);
+  _SSD1306_DisplayOn();
+}
+
