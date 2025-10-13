@@ -5,13 +5,13 @@
 // -----------------------------------------------------------------------------
 // Low-level I2C helpers using your _I2C1_* functions
 // -----------------------------------------------------------------------------
-static void TCS34725_Write8(uint8_t addr, uint8_t reg, uint8_t val)
+static void _TCS34725_Write8(uint8_t addr, uint8_t reg, uint8_t val)
 {
     uint8_t data[2] = { TCS34725_COMMAND_BIT | reg, val };
     _I2C1_StartWrite(addr, 2, data, _I2C_AutoEnd_Hardware);
 }
 
-static uint8_t TCS34725_Read8(uint8_t addr, uint8_t reg)
+static uint8_t _TCS34725_Read8(uint8_t addr, uint8_t reg)
 {
     uint8_t cmd = TCS34725_COMMAND_BIT | reg;
     uint8_t val;
@@ -20,7 +20,7 @@ static uint8_t TCS34725_Read8(uint8_t addr, uint8_t reg)
     return val;
 }
 
-static uint16_t TCS34725_Read16(uint8_t addr, uint8_t reg)
+static uint16_t _TCS34725_Read16(uint8_t addr, uint8_t reg)
 {
     uint8_t cmd = TCS34725_COMMAND_BIT | reg;
     uint8_t buf[2];
@@ -38,14 +38,14 @@ bool _TCS34725_Init(TCS34725_t *dev)
     dev->integrationTime = 0xEB; // default 50 ms
     dev->gain = 0x01;            // 4x gain
 
-    uint8_t id = TCS34725_Read8(dev->address, TCS34725_ID);
+    uint8_t id = _TCS34725_Read8(dev->address, TCS34725_ID);
     if (id == 0x00 || id == 0xFF)
         return false;  // sensor not found
 
     dev->initialized = true;
 
-    TCS34725_Write8(dev->address, TCS34725_ATIME, dev->integrationTime);
-    TCS34725_Write8(dev->address, TCS34725_CONTROL, dev->gain);
+    _TCS34725_Write8(dev->address, TCS34725_ATIME, dev->integrationTime);
+    _TCS34725_Write8(dev->address, TCS34725_CONTROL, dev->gain);
     _TCS34725_Enable(dev);
 
     return true;
@@ -53,17 +53,17 @@ bool _TCS34725_Init(TCS34725_t *dev)
 
 void _TCS34725_Enable(TCS34725_t *dev)
 {
-    TCS34725_Write8(dev->address, TCS34725_ENABLE, TCS34725_ENABLE_PON);
+    _TCS34725_Write8(dev->address, TCS34725_ENABLE, TCS34725_ENABLE_PON);
     for (volatile int i = 0; i < 10000; i++); // ~3ms delay
-    TCS34725_Write8(dev->address, TCS34725_ENABLE, TCS34725_ENABLE_PON | TCS34725_ENABLE_AEN);
+    _TCS34725_Write8(dev->address, TCS34725_ENABLE, TCS34725_ENABLE_PON | TCS34725_ENABLE_AEN);
 }
 
 void _TCS34725_GetRawData(TCS34725_t *dev, uint16_t *r, uint16_t *g, uint16_t *b, uint16_t *c)
 {
-    *c = TCS34725_Read16(dev->address, TCS34725_CDATAL);
-    *r = TCS34725_Read16(dev->address, TCS34725_RDATAL);
-    *g = TCS34725_Read16(dev->address, TCS34725_GDATAL);
-    *b = TCS34725_Read16(dev->address, TCS34725_BDATAL);
+    *c = _TCS34725_Read16(dev->address, TCS34725_CDATAL);
+    *r = _TCS34725_Read16(dev->address, TCS34725_RDATAL);
+    *g = _TCS34725_Read16(dev->address, TCS34725_GDATAL);
+    *b = _TCS34725_Read16(dev->address, TCS34725_BDATAL);
 }
 
 uint16_t _TCS34725_CalculateLux(uint16_t r, uint16_t g, uint16_t b)
