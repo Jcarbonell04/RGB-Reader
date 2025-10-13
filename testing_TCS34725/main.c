@@ -1,9 +1,9 @@
-// Testing Lib - Reading RGB values on SSD1306 (OLED) from TCS34725 (colour sensor)
-// Core clock: 64MHz
-//
-// Requires I2C1 on PB6/PB7 (SCL/SDA)
-// I2C Bus pull-ups required.
-//
+//***********************************************************************************
+// Program: main.c
+// Description: TCS34725 Colour Sensor + OLED Display Demo
+// MCU: STM32G031 (64 MHz PLL)
+// Author: Jaedyn Carbonell
+//***********************************************************************************
 
 #include "stm32g031xx.h"
 #include <stdio.h>
@@ -14,270 +14,124 @@
 #include "SSD1306.h"
 #include "TCS34725.h"
 
-// function prototypes
+// Function prototypes
 void _OneTimeInits(void);
+void _TCS34725_GetColorInfo(uint16_t r, uint16_t g, uint16_t b, uint16_t c,
+                            uint8_t *R8, uint8_t *G8, uint8_t *B8, char *colorName);
+void _Delay_ms(uint32_t ms);
 
-TCS34725_t colourSensor;
+// Global sensor instance
+TCS34725_t colorSensor;
 
-// -----------------------------------------------------
+//***********************************************************************************
 int main(void)
-{
+    // Kick MCU to 64 MHz
+    {
     _PLL_To_64();
+
+    // Run startup initializations
     _OneTimeInits();
 
-    _USART2_TxStringXY(1, 6, "Initializing TCS34725...");
-
-    // Initialize sensor
-    if (!_TCS34725_Init(&colourSensor))
+    // Initialize the color sensor (0x29 address)
+    if (!_TCS34725_Init(&colorSensor))
     {
-        _USART2_TxStringXY(1, 7, "TCS34725 not found!");
-        _SSD1306_StringXY(0, 0, "TCS34725 not found!");
-        _SSD1306_Render();
+        _USART2_TxStringXY(1, 6, "TCS34725 Init Failed!");
         while (1);
     }
 
-    _USART2_TxStringXY(1, 7, "TCS34725 ready!");
-    _SSD1306_Clear();
-    _SSD1306_StringXY(0, 0, "TCS34725 ready!");
-    _SSD1306_Render();
+    _USART2_TxStringXY(1, 6, "TCS34725 Init OK");
 
-    volatile uint16_t r, g, b, c;
-    volatile char buff[64];
-
+    // Main loop
     while (1)
     {
-        // Read raw data
-        _TCS34725_GetRawData(&colourSensor, &r, &g, &b, &c);
+        uint16_t r, g, b, c;
+        uint8_t R8, G8, B8;
+        char buff[64], colorName[16];
+
+        // Get raw color readings
+        _TCS34725_GetRawData(&colorSensor, &r, &g, &b, &c);
+
+        // Convert to 0–255 and identify color
+        _TCS34725_GetColorInfo(r, g, b, c, &R8, &G8, &B8, colorName);
+
+        // Format message
+        sprintf(buff, "RGB:%3d,%3d,%3d %s", R8, G8, B8, colorName);
+
+        // Send to serial console
+        _USART2_TxStringXY(1, 8, buff);
 
         // Display on OLED
         _SSD1306_Clear();
-        sprintf(buff, "R:%5u", r);
-        _SSD1306_StringXY(0, 0, buff);
-        sprintf(buff, "G:%5u", g);
-        _SSD1306_StringXY(0, 1, buff);
-        sprintf(buff, "B:%5u", b);
+        _SSD1306_StringXY(0, 0, "TCS34725 Sensor");
         _SSD1306_StringXY(0, 2, buff);
-        sprintf(buff, "C:%5u", c);
-        _SSD1306_StringXY(0, 3, buff);
         _SSD1306_Render();
 
-        // Print to serial as well
-        sprintf(buff, "R:%u G:%u B:%u C:%u\r\n", r, g, b, c);
-        _USART2_TxString(buff);
-
-        for (volatile int i = 0; i < 500000; ++i); // crude 500ms delay
+        _Delay_ms(500);
     }
 }
 
-// -----------------------------------------------------
+//***********************************************************************************
 void _OneTimeInits(void)
 {
-    // Turn on GPIO clock for Port A (needed for USART)
+    // Enable GPIO port clocks
     RCC->IOPENR |= RCC_IOPENR_GPIOAEN;
 
-    // Initialize serial at 38400 baud
+    // Start USART2 at 38400 baud
     _USART2_Init(64E6, 38400);
     _USART2_ClearScreen();
     _USART2_TxStringXY(1, 1, "USART started...");
 
-    // Initialize I2C1 on PB6/PB7
-    _USART2_TxStringXY(1, 3, "Starting I2C1 bus...");
+    // Initialize I2C on PB6/PB7
+    _USART2_TxStringXY(1, 3, "Starting I2C bus...");
     _I2C1_Init_PB67(100);
-    _USART2_TxStringXY(1, 4, "I2C1 bus ready...");
+    _USART2_TxStringXY(1, 4, "I2C bus started...");
 
     // Initialize OLED
     _SSD1306_DispInit(_SSD1306_OR_UP);
     _SSD1306_DisplayOn();
-    _SSD1306_Clear();
-    _SSD1306_StringXY(0, 0, "OLED Ready");
-    _SSD1306_Render();
 }
 
+//***********************************************************************************
+void _TCS34725_GetColorInfo(uint16_t r, uint16_t g, uint16_t b, uint16_t c,
+                            uint8_t *R8, uint8_t *G8, uint8_t *B8, char *colorName)
+{
+    if (c == 0) c = 1;
 
-////***********************************************************************************
-//// Program: main.c
-//// Description: Test program - read RGB values from TCS34725 and display on SSD1306
-//// Author: Jaedyn Carbonell
-//// Date: October 2025
-////***********************************************************************************
+    // Normalize to 0–255
+    *R8 = (uint8_t)((float)r / c * 255);
+    *G8 = (uint8_t)((float)g / c * 255);
+    *B8 = (uint8_t)((float)b / c * 255);
 
-//#include "stm32g031xx.h"
-//#include <stdio.h>
-//#include "gpio.h"
-//#include "pll.h"
-//#include "usart.h"
-//#include "i2c.h"
-//#include "SSD1306.h"
-//#include "TCS34725.h"
+    // Clamp
+    if (*R8 > 255) *R8 = 255;
+    if (*G8 > 255) *G8 = 255;
+    if (*B8 > 255) *B8 = 255;
 
-//// function prototypes
-//void _OneTimeInits(void);
-//void _Delay_ms(unsigned int ms);
+    // Basic color identification
+    if (*R8 > 200 && *G8 > 200 && *B8 > 200)
+        sprintf(colorName, "White");
+    else if (*R8 > 180 && *G8 < 120 && *B8 < 120)
+        sprintf(colorName, "Red");
+    else if (*G8 > 180 && *R8 < 120 && *B8 < 120)
+        sprintf(colorName, "Green");
+    else if (*B8 > 180 && *R8 < 120 && *G8 < 120)
+        sprintf(colorName, "Blue");
+    else if (*R8 > 180 && *G8 > 120 && *B8 < 80)
+        sprintf(colorName, "Yellow");
+    else if (*R8 > 120 && *G8 > 100 && *B8 < 90)
+        sprintf(colorName, "Skin");
+    else if (*R8 < 80 && *G8 < 80 && *B8 < 80)
+        sprintf(colorName, "Black");
+    else
+        sprintf(colorName, "Unknown");
+}
 
-//TCS34725_t colorSensor; 
-
-////***********************************************************************************
-//// main()
-////***********************************************************************************
-//int main(void)
-//{
-//    // Change clock
-//    _PLL_To_64();
-
-//    // Initialize all peripherals
-//    _OneTimeInits();
-
-//    _TCS34725_Init(&colorSensor);
-
-//    // oeld display init
-//    _SSD1306_Clear();
-//    _SSD1306_StringXY(0, 0, "TCS34725 Ready");
-//    _SSD1306_Render();
-//    _USART2_TxStringXY(1, 6, "TCS34725 Ready...");
-
-//    // Main loop
-//    while (1)
-//    {
-//        unsigned short r, g, b, c;
-//        char buff[64];
-
-//        // Read raw RGB and clear channel values
-//        //_TCS34725_ReadRGB(&r, &g, &b, &c);
-
-//        // Print to USART
-//        sprintf(buff, "R:%5u \n G:%5u\n  B:%5u\n  C:%5u", r, g, b, c);
-//        _USART2_TxStringXY(1, 8, buff);
-
-//        // Print to OLED
-//        _SSD1306_Clear();
-//        _SSD1306_StringXY(0, 0, "TCS34725 RGB:");
-//        _SSD1306_StringXY(0, 1, buff);
-//        _SSD1306_Render();
-
-//        // short delay (around 1 second)
-//        _Delay_ms(1000);
-//    }
-//}
-
-////***********************************************************************************
-//// _OneTimeInits()
-//// Description: Performs system and peripheral initialization
-////***********************************************************************************
-//void _OneTimeInits(void)
-//{
-//    // enable GPIOA clock
-//    RCC->IOPENR |= RCC_IOPENR_GPIOAEN;
-
-//    // setup USART2 (38400 baud @ 64MHz)
-//    _USART2_Init(64E6, 38400);
-//    _USART2_ClearScreen();
-//    _USART2_TxStringXY(1, 1, "USART2 Started...");
-
-//    // setup I2C1 on PB6/PB7 @ 100kHz
-//    _USART2_TxStringXY(1, 3, "Starting I2C bus...");
-//    _I2C1_Init_PB67(_I2C_SpeedMode_100);
-//    _USART2_TxStringXY(1, 4, "I2C bus ready...");
-
-//    // initialize OLED
-//    _SSD1306_DispInit(_SSD1306_OR_UP);
-//    _SSD1306_DisplayOn();
-//    _SSD1306_Clear();
-//    _SSD1306_StringXY(0, 0, "SSD1306 Ready");
-//    _SSD1306_Render();
-//}
-
-////***********************************************************************************
-//// _Delay_ms()
-//// Description: crude software delay (approximate)
-////***********************************************************************************
-//void _Delay_ms(unsigned int ms)
-//{
-//    for (unsigned int i = 0; i < ms * 8000; ++i)
-//    {
-//        __NOP();
-//    }
-//}
-
-
-////// Testing Lib - Reading rgb valuse on SSD1306(oled display) from TCS34725(colour sensor)
-////// Core clock is 64MHz
-//////
-////// This requires the I2C1 config on pins PB6/PB7 (d0 and d1)
-////// I2C Bus pull-ups are required.
-//////
-//////////////////////////////////////////
-
-////// define library headers here
-////#include "stm32g031xx.h"
-////#include <stdio.h>
-////#include "gpio.h"
-////#include "pll.h"
-////#include "usart.h"
-////#include "i2c.h"
-////#include "SSD1306.h"
-////#include "TCS34725.h"
-
-////// perform one-time initializations before the main loop
-////void _OneTimeInits(void);
-
-////int main(void)
-////{
-////  // device should be running on HSI / 1 so 16MHz
-////  // not using external 32kHz XTAL yet
-////  // kick it up to 64MHz
-////  _PLL_To_64();
-
-////  // perform one-time startups for the program, but at full speed
-////  _OneTimeInits();  
-
-////  // I2C bus scan to see what devices are reporting in
-////  {
-////        // moved to main loop
-////  }
-
-////  // begin main program loop
-////  // variables used in the main loop are created here 
-////  do
-////  { 
-////    // do somethig here
-////    unsigned char pData[128] = {0};
-////    _I2C1_BusScan(pData);
-////    int iLine = 5;
-////    for (int i = 0; i < 128; ++i)
-////    {
-////      if (pData[i])
-////      {
-////        char buff[80] = {0};
-////        (void)sprintf (buff, "Device found at 7-bit address: %2.2X ", i);
-////        _USART2_TxStringXY(1, iLine++, buff);
-////        // or print to debug console
-////        printf("%s\r\n", buff);
-////        _SSD1306_StringXY(0, 0, buff);
-////        _SSD1306_Render();
-////      }
-////    }
-////  }
-////  while (1);
-////}
-
-////void _OneTimeInits(void)
-////{
-////  // turn on GPIO clock for Port A - can't do anything without this
-////  RCC->IOPENR |= RCC_IOPENR_GPIOAEN;
-
-////  // bring up the serial port, 38400 BAUD currently on VCOM through programmer
-////  _USART2_Init(64E6, 38400);
-////  _USART2_ClearScreen();
-
-////  _USART2_TxStringXY(1, 1, "USART started...");
-
-////  // I2C Stuff
-////  _USART2_TxStringXY(1, 3, "starting I2C bus...");
-////  _I2C1_Init_PB67(100);
-////  _USART2_TxStringXY(1, 4, "I2C bus started...");
-
-////  // one-time OLED init
-////  _SSD1306_DispInit(_SSD1306_OR_UP);
-////  _SSD1306_DisplayOn();
-////}
+void _Delay_ms(uint32_t ms)
+{
+    // crude blocking delay based on 64MHz system clock
+    for (uint32_t i = 0; i < ms * 6400; i++)
+    {
+        __NOP(); // each NOP takes one CPU cycle
+    }
+}
 
