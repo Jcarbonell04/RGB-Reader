@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "NuceloG031_Project-altium-import")(type "KiCad")(uri "${KIPRJMOD}/NuceloG031_Project-altium-import.kicad_sym")(options "")(descr ""))
+  (lib (name "Local_Library")(type "KiCad")(uri "C:/Users/carlose/Documents/GitHub/HardwareDemos/HardwareLibraries/Local_Library.kicad_sym")(options "")(descr ""))
+)
