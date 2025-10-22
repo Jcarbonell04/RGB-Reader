@@ -5,9 +5,10 @@
 	(uuid "96bebdbe-fc91-4a99-bfb1-8dbd748d504f")
 	(paper "A4")
 	(title_block
-		(title "RGB Reader")
+		(title "RGB Reader Breadboard Design (Proof of Life)")
 		(date "2025-10-21")
-		(company "Jaedyn Carbonell")
+		(company "NAIT")
+		(comment 1 "Jaedyn Carbonell (CMPE2750 Project)")
 	)
 	(lib_symbols
 		(symbol "DM-OLED096-636:DM-OLED096-636"
@@ -1660,6 +1661,26 @@
 		)
 		(uuid "fd5754bb-1be2-4206-a0d4-0cdce8e60d6e")
 	)
+	(label "SCL"
+		(at 69.85 33.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1d9a4041-870f-4581-9d59-70a70c2910bb")
+	)
+	(label "SDA"
+		(at 69.85 35.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f00b9c86-fb48-49d0-846b-07f582c67f9d")
+	)
 	(symbol
 		(lib_id "power:GND")
 		(at 49.53 40.64 90)
@@ -1803,7 +1824,7 @@
 		(dnp no)
 		(uuid "3519beff-7882-48fa-99b1-5475d37b93a9")
 		(property "Reference" "U2"
-			(at 30.48 46.99 0)
+			(at 34.29 60.706 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1811,8 +1832,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "TCS34725"
-			(at 30.226 49.022 0)
+		(property "Value" "TCS34725 (0x29)"
+			(at 33.528 49.022 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1843,6 +1864,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -2019,7 +2041,7 @@
 		(dnp no)
 		(uuid "68dbee18-d24f-4744-8183-00ade6de6416")
 		(property "Reference" "U1"
-			(at 33.02 20.32 0)
+			(at 33.02 33.782 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2027,8 +2049,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "SSD1306"
-			(at 29.718 23.876 0)
+		(property "Value" "SSD1306 128 x 64 OLED (0x3C)"
+			(at 41.148 23.368 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2061,6 +2083,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MF" "Display Module"
@@ -2250,8 +2273,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "5V USB"
-			(at 79.756 26.162 0)
+		(property "Description" "Powered by USB on dev board"
+			(at 89.662 75.184 0)
 			(effects
 				(font
 					(size 1.27 1.27)

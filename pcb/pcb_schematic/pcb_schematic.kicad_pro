@@ -1,6 +1,14 @@
 {
   "board": {
     "3dviewports": [],
+    "design_settings": {
+      "defaults": {},
+      "diff_pair_dimensions": [],
+      "drc_exclusions": [],
+      "rules": {},
+      "track_widths": [],
+      "via_dimensions": []
+    },
     "ipc2581": {
       "dist": "",
       "distpn": "",
@@ -241,7 +249,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "bread_schematic.kicad_pro",
+    "filename": "pcb_schematic.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -401,7 +409,7 @@
   },
   "sheets": [
     [
-      "96bebdbe-fc91-4a99-bfb1-8dbd748d504f",
+      "35d73676-d357-4087-a666-5ddadc49cd83",
       "Root"
     ]
   ],
