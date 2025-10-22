@@ -1,0 +1,5428 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "5793ca51-d44d-48f5-a7a1-75ec115e86c2")
+	(paper "User" 298.45 217.322)
+	(lib_symbols
+		(symbol "TCS34725_schematic-eagle-import:+3V3"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#+3V3"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at -2.54 -5.08 90)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "SUPPLY SYMBOL"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+3V3_1_0"
+				(polyline
+					(pts
+						(xy 0 0) (xy -1.27 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.905) (xy 0 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "+3V3"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TCS34725_schematic-eagle-import:CAP_CERAMIC_0805"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at 2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "TCS34725_schematic:_0805"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Ceramic Capacitors\n\n0402 - 0402 Surface Mount Capacitors\n\n• 16pF 50V 5% [Digikey: 445-4899-2-ND]\n• 18pF 50V 5% [Digikey: 490-1281-2-ND]\n• 22pF 50V 5% [Digikey: 490-1283-2-ND]\n• 68pF 50V 5% [Digikey: 490-1289-2-ND]\n• 0.1uF 10V 10% [Digikey: 490-1318-2-ND]\n• 1.0uF 6.3V 10% [Digikey: 490-1320-2-ND]\n\n0603 - 0603 Surface Mount Capacitors\n\n• 16 pF 50V 5% [Digikey: 445-5051-2-ND]\n• 22 pF 50V [Digikey: PCC220ACVTR-ND]\n• 33 pF 50V 5% [Digikey: 490-1415-1-ND]\n• 56pF 50V 5% [Digikey: 490-1421-1-ND]\n• 220pF 50V 5% [Digikey: 445-1285-1-ND]\n• 680 pF 50V\n• 2200 pF 50V 5% C0G [Digikey: 445-1297-1-ND]\n• 5600 pF 100V 5% X7R [Digikey: 478-3711-1-ND]\n• 0.1 µF 25V 10% [Digikey: PCC2277TR-ND]\n• 0.22 µF 16V 10% X7R [Digikey: 445-1318-1-ND]\n• 1.0 µF 25V 10% [Digikey: 445-5146-2-ND]\n\n0603 - RF Specific\n\n• 3pF 250V +/-0.1pF RF [Digikey: 712-1347-1-ND]\n• 18 pF 250V 5%  [Digikey: 478-3505-1-ND or 712-1322-1-ND]\n• 56 pF 250V 5% C0G RF [Digikey: 490-4867-1-ND]\n• 68 pF 250V RF [Digikey: 490-4868-1-ND]\n\n0805 - 0805 Surface Mount Capacitors\n\n• 220 pF 250V 2% RF Ceramic Capacitor [Digikey: 712-1398-1-ND]\n• 1000 pF 50V 2% NP0 Ceramic Capacitor [Digikey: 478-3760-1-ND]\n• 0.1 µF 25V 10% Ceramic Capacitor [Digikey: PCC1828TR-ND]\n• 1.0 µF 16V 10% Ceramic Capacitor[Digikey: 490-1691-2-ND]\n• 10.0 µF 10V 10% Ceramic Capacitor[Digikey: 709-1228-1-ND]\n• 10.0 uF 16V 10% Ceramic Capacitor [Digikey: 478-5165-2-ND]\n• 47 uF 6.3V 20% Ceramic Capacitor [Digikey: 587-1779-1-ND or 399-5506-1-ND]\n\n1206 - 1206 Surface Mount Capacitors\n\n• 47uF 10V 20% Ceramic Capacitor [Digikey: 490-5528-1-ND or 399-5508-1-ND or 445-6010-1-ND]\n• 100uF 6.3V -20%, +80% Y5V Ceramic Capacitor (Digikey: 490-4512-1-ND, Mouser: 81-GRM31CF50J107ZE1L)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CAP_CERAMIC_0805_1_0"
+				(rectangle
+					(start -1.27 1.524)
+					(end 1.27 2.032)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.27 0.508)
+					(end 1.27 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 1.778)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy 0 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "P$1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "P$2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TCS34725_schematic-eagle-import:FIDUCIAL{dblquote}{dblquote}"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "FID"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "TCS34725_schematic:FIDUCIAL_1MM"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Fiducial Alignment Points\n\nVarious fiducial points for machine vision alignment."
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "FIDUCIAL{dblquote}{dblquote}_1_0"
+				(polyline
+					(pts
+						(xy -0.762 0.762) (xy 0.762 -0.762)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.762) (xy -0.762 -0.762)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TCS34725_schematic-eagle-import:GND"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at -1.524 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "GND"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_1_0"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 2.54 270)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TCS34725_schematic-eagle-import:HEADER-1X770MIL"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "JP"
+				(at -6.35 10.795 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -6.35 -12.7 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "TCS34725_schematic:1X07_ROUND_70"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "PIN HEADER"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "HEADER-1X770MIL_1_0"
+				(polyline
+					(pts
+						(xy -6.35 10.16) (xy -6.35 -10.16)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -6.35 -10.16) (xy 1.27 -10.16)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 10.16) (xy -6.35 10.16)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -10.16) (xy 1.27 10.16)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 7.62 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 5.08 0)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 2.54 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 -2.54 0)
+					(length 2.54)
+					(name "5"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 -5.08 0)
+					(length 2.54)
+					(name "6"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 -7.62 0)
+					(length 2.54)
+					(name "7"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TCS34725_schematic-eagle-import:LEDEV45-21"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "LED"
+				(at -5.08 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -5.08 -2.794 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "TCS34725_schematic:EVERLIGHT_45-21"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "LED\n\n0603 - 0603 Surface Mount Package\n\n2mA:\n\n• Green LED - Low Power (3.9mcd, 2ma, 1.7Vf) - Digikey: 475-2709-2-ND\n• Orange LED - Low Power (9.8mcd, 2ma, 1.8Vf) - Digikey: 475-1194-2-ND\n• Red LED - Low Power (5mcd, 2ma, 1.8Vf) - Digikey: 475-1195-2-ND\n• Yellow LED - Low Power (7mcd, 2ma, 1.8Vf) - Digikey: 475-1196-2-ND\n\n5mA:\n\n• Blue LED - Low Power (17mcd, 5ma, 2.9Vf) - Digikey: LNJ937W8CRACT-ND\n\n0805 - 0805 Surface Mount Package\n\n2mA:\n\n• Red LED (8.8mcd, 2mA, 1.8Vf, Clear) - Low Power [Digikey: 475-2510-1-ND]\n• Green LED (5mcd, 2mA, 1.8Vf, Clear) - Low Power [Digikey: 475-2730-1-ND]\n• Yellow LED (11.3mcd, 2mA, 1.8Vf, Clear) - Low Power [Digikey: 475-2555-1-ND]\n\n20mA:\n\n• Red LED (104mcd, 20mA, Diffused) - LS R976 [Digikey: 475-1278-6-ND]\n• Red LED (12mcd, 20mA, 2.0Vf, Clear) - APT2012EC [Digikey: 754-1128-1-ND]\n• Green LED (15mcd, 20mA, 2.2Vf, Clear) - APT2012GC [Digikey: 754-1131-1-ND]\n• Orange LED (160mcd, 20mA, 2.1Vf, Clear) - APT2012SECK [Digikey: 754-1130-1-ND]\n\n• 1206 - 1206 Surface Mount Package\n\n• Green LED (26mcd, 20mA, Diffused) - LG N971  [Digikey: 475-1407-6-ND]\n• Red LED (15mcd, 20mA, Diffused) - LH N974 [Digikey: 475-1416-6-ND]\n\n• Cree - Cree High-Power Surface Mount LEDs\n\n• XPEBWT-L1-0000-00D50 - White 111lm 350mA 2.9Vf 6200K 110°\n• XTEAWT-00-0000-00000LEE3 - White 114lm 350mA 2.85Vf 5000K 115°\n\n• Everlight - Everlight 45-21 Series Surface Mount LEDs\n\n• 45-21/QK2C-B2832AC2CB2/2T - Warm White 2000mcd 20mA 3.25Vf 3050K 120°\n• 45-21/LK2C-B38452C4CB2/2T - Nuetral White 2000mcd 20mA 3.25Vf 4150K 120°\n• 45-21/LK2C-B50634C6CB2/2T - Cold White 2200mcd 20mA 3.25Vf 5650K 120°"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LEDEV45-21_1_0"
+				(polyline
+					(pts
+						(xy -2.54 1.27) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy 0 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 1.27) (xy -0.635 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.9525 2.8575) (xy -0.3175 2.2225)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 1.27) (xy 0.635 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3175 2.2225) (xy 0 3.175)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 3.175) (xy -0.9525 2.8575)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.3175 2.8575) (xy 0.9525 2.2225)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.9525 2.2225) (xy 1.27 3.175)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 3.175) (xy 0.3175 2.8575)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "A"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 0 180)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "K"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TCS34725_schematic-eagle-import:LIGHT_TCS3472"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" ""
+				(at -10.16 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -10.16 -13.97 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "TCS34725_schematic:TCS3472_FN6"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "TCS3472 RGB + Clear Color Sensor\n\n• VDD: 2.7-3.6V\n• Temp: -30 - 70°C\n• IR light blocking filter\n• 3,800,000:1 Dynamic Range\n• 2.5µA sleep state\n\nPart IDs\n\n• TCS34725: I2C bus logic = VDD, I2C address: 0x29\n• TCS34727: I2C bus logic = 1.8V, I2C address: 0x29"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LIGHT_TCS3472_1_0"
+				(polyline
+					(pts
+						(xy -10.16 11.43) (xy 10.16 11.43)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -10.16 5.08) (xy -10.16 11.43)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -10.16 5.08) (xy 10.16 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -10.16 -5.08) (xy -10.16 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -10.16 -5.08) (xy -10.16 -11.43)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -10.16 -11.43) (xy 10.16 -11.43)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 11.43) (xy 10.16 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 5.08) (xy 10.16 -5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -5.08) (xy -10.16 -5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -11.43) (xy 10.16 -5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "VDD:"
+					(at -8.255 -7.62 0)
+					(effects
+						(font
+							(size 1.27 1.0795)
+						)
+						(justify left bottom)
+					)
+				)
+				(text "Temp:"
+					(at -8.255 -10.16 0)
+					(effects
+						(font
+							(size 1.27 1.0795)
+						)
+						(justify left bottom)
+					)
+				)
+				(text "Color Sensor"
+					(at -6.985 6.35 0)
+					(effects
+						(font
+							(size 1.27 1.0795)
+						)
+						(justify left bottom)
+					)
+				)
+				(text "TCS3472x"
+					(at -5.08 8.89 0)
+					(effects
+						(font
+							(size 1.27 1.0795)
+						)
+						(justify left bottom)
+					)
+				)
+				(text "2.7-3.6V"
+					(at 0 -7.62 0)
+					(effects
+						(font
+							(size 1.27 1.0795)
+						)
+						(justify left bottom)
+					)
+				)
+				(text "-30-70°C"
+					(at 0 -10.16 0)
+					(effects
+						(font
+							(size 1.27 1.0795)
+						)
+						(justify left bottom)
+					)
+				)
+				(pin power_in line
+					(at -12.7 2.54 0)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "P$1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -12.7 0 0)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "P$2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -12.7 -2.54 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "P$3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 2.54 180)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "P$6"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 0 180)
+					(length 2.54)
+					(name "INT"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "P$5"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 12.7 -2.54 180)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "P$4"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TCS34725_schematic-eagle-import:MOSFET-NWIDE"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 0.635 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at 5.08 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "TCS34725_schematic:SOT23-WIDE"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "N-Channel Mosfet\n\nLEGEND\n\nVDS: Voltage Drain-Source ID: Drain Current RDS(ON): Drain-Source On-State Resistance VGS(TH): Gate-Source Threshold Voltage CISS: Drain-Source Input Capacitance\n\nSOT-23   Name VDS ID RDS(ON) VGS(TH) CISS Order Number    2N7002E 60V 260mA 2.5 Ohm 2.5V @ 250uA 26.7pF @ 25V 2N7002ET1GOSTR-ND    BSH103 30V 850mA 400 mOhm 400mV @ 1mA 83pF @ 24V BSH103,235-ND    BSS138 60V 320mA 1.6 Ohm 1.5V @ 250uA 50pF @ 10V Mouser: 771-BSS138PW115    DMN2075U-7 20V 4.2A 38 mOhm 1V @ 250 uA 594.3pF @ 10V DMN2075U-7DICT-ND\n\n* BSS138 good choice for I2C level-shifting"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MOSFET-NWIDE_1_0"
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 3.175) (xy 0.762 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.54) (xy 0.762 1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.54) (xy 3.81 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.762) (xy 0.762 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0) (xy 0.762 -0.762)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.905) (xy 0.762 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -2.54) (xy 0.762 -3.175)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 -0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 2.54)
+					(radius 0.3592)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 0.762 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 3.81 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 -2.54)
+					(radius 0.3592)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.508) (xy 3.048 0.254)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 2.54) (xy 3.81 0.508)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 0.508) (xy 3.302 0.508)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 0.508) (xy 3.81 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 -0.508) (xy 3.302 0.254) (xy 4.318 0.254)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.318 0.508) (xy 3.81 0.508)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.572 0.762) (xy 4.318 0.508)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "G"
+					(at -1.27 -1.905 0)
+					(effects
+						(font
+							(size 0.8128 0.6908)
+						)
+						(justify left bottom)
+					)
+				)
+				(text "D"
+					(at 3.175 3.175 0)
+					(effects
+						(font
+							(size 0.8128 0.6908)
+						)
+						(justify left bottom)
+					)
+				)
+				(text "S"
+					(at 3.175 -3.81 0)
+					(effects
+						(font
+							(size 0.8128 0.6908)
+						)
+						(justify left bottom)
+					)
+				)
+				(pin bidirectional line
+					(at -2.54 -2.54 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TCS34725_schematic-eagle-import:MOUNTINGHOLE2.5"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "TCS34725_schematic:MOUNTINGHOLE_2.5_PLATED"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole\n\nFor #2 screws (0.086\"/2.18mm width, 0.094\"/2.4mm hole) use 2.5mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MOUNTINGHOLE2.5_1_0"
+				(circle
+					(center 0 0)
+					(radius 1.905)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 2.54)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TCS34725_schematic-eagle-import:RESISTOR_0805"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at -2.54 2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -2.54 -3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "TCS34725_schematic:_0805"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistors\n\n0402 - 0402 Surface Mount Package\n\n• 22 Ohm 1% 1/16W [Digikey: 311-22.0LRTR-ND]\n• 33 Ohm 5% 1/16W\n• 1.0K 5% 1/16W\n• 1.5K 5% 1/16W\n• 2.0K 1% 1/16W\n• 10.0K 1% 1/16W [Digikey: 311-10.0KLRTR-ND]\n• 10.0K 5% 1/16W [Digikey: RMCF0402JT10K0TR-ND]\n• 12.1K 1% 1/16W [Digikey: 311-22.0LRTR-ND]\n• 100.0K 5% 1/16W\n\n0603 - 0603 Surface Mount Package\n\n• 0 Ohm 1/10 Watt 1% Resistor\n• 15 Ohm 1/10 Watt 1% Resistor\n• 33 Ohm 1/10 Watt 1% Resistor\n• 49.9 Ohm 1/10 Watt 1% Resistor\n• 100 Ohm 1/10 Watt 1% Resistor\n• 150 Ohm 1/10 Watt 1% Resistor\n• 240 Ohm 1/10 Watt 1% Resistor\n• 390 Ohm 1/10 Watt 1% Resistor\n• 560 Ohm 1/10 Watt 1% Resistor\n• 680 Ohm 1/10 Watt 1% Resistor\n• 750 Ohm 1/10 Watt 1% Resistor\n• 1.0K Ohm 1/10 Watt 1% Resistor\n• 1.5K Ohm 1/10 Watt 1% Resistor\n• 2.0K Ohm 1/10 Watt 1% Resistor\n• 2.2K Ohm 1/10 Watt 1% Resistor\n• 3.3K Ohm 1/10 Watt 1% Resistor\n• 4.7K Ohm 1/10 Watt 1% Resistor\n• 10.0K Ohm 1/10 Watt 1% Resistor\n• 12.0K Ohm 1/10 Watt 1% Resistor\n• 12.1K Ohm 1/10 Watt 1% Resistor\n• 20.0K Ohm 1/10 Watt 1% Resistor\n• 33.0K Ohm 1/10 Watt 1% Resistor\n• 100.0K Ohm 1/10 Watt 1% Resistor\n\n0805 - 0805 Surface Mount Package\n\n• 0 Ohm 1/8 Watt 1% Resistor\n• 33 Ohm 1/8 Watt 1% Resistor\n• 100 Ohm 1/8 Watt 1% Resistor\n• 150 Ohm 1/8 Watt 1% Resistor\n• 200 Ohm 1/8 Watt 1% Resistor\n• 240 Ohm 1/8 Watt 1% Resistor\n• 330 Ohm 1/8 Watt 1% Resistor\n• 390 Ohm 1/8 Watt 1% Resistor\n• 470 Ohm 1/8 Watt 1% Resistor\n• 1.0K Ohm 1/8 Watt 1% Resistor\n• 1.5K Ohm 1/8 Watt 1% Resistor\n• 2.0K Ohm 1/8 Watt 1% Resistor\n• 4.7K Ohm 1/8 Watt 1% Resistor\n• 5.1K Ohm 1/8 Watt 1% Resistor\n• 5.6K Ohm 1/8 Watt 1% Resistor\n• 10.0K Ohm 1/8 Watt 1% Resistor\n• 22.0K Ohm 1/8 Watt 1% Resistor\n• 33.0K Ohm 1/8 Watt 1% Resistor\n• 100K Ohm 1/8 Watt 1% Resistor\n\n1206 - 1206 Surface Mount Package  2012 - 2010 Surface Mount Package\n\n• 0.11 Ohm 1/2 Watt 1% Resistor - Digikey: RHM.11UCT-ND"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RESISTOR_0805_1_0"
+				(polyline
+					(pts
+						(xy -2.54 1.27) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -1.27) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TCS34725_schematic-eagle-import:VIN"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at -1.524 1.016 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "VIN Supply Symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "VIN_1_0"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy 0 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "VIN"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TCS34725_schematic-eagle-import:VREG_SOT23-5"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -7.62 6.096 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -7.62 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "TCS34725_schematic:SOT23-5"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "SOT23-5 Fixed Voltage Regulators\n\nTo better organise some of the SOT23-5 fixed voltage regulators in this library, this new part was created.\n\nPart Current Out V Out V In V Dropout Digikey Part No.     ADP121   150mA   3.3V   3.4-5.5V   0.09V @ 150mA   ADP121-AUJZ33R7CT-ND     ADP121   150mA   3.0V   3.1-5.5V   0.09V @ 150mA   ADP121-AUJZ30R7CT-ND     ADP122   300mA   3.3V   3.4-5.5V   0.085V @ 300mA   ADP122AUJZ-3.3-R7CT-ND     ADP1712   300mA   3.3V   3.5-5.5V   0.17V @ 300mA   ADP1712AUJZ-3.3-R7TR-ND     AP7311 (Low Cost)   150mA   3.3V   3.5-6V   0.15V @ 150mA   AP7311-33WG-7DICT-ND      LD39015M18R   150mA   1.8V   1.9V-5.5V   0.08V @ 100mA   497-6977-1-ND      MCP1824T-3302E/OT   300mA   3.3V   3.5V-6V   0.2V @ 300mA   MCP1824T-3302E/OTCT-ND      MIC5205-2.5YM5 TR   150mA   2.5V   2.7-16V   0.165V @ 150mA   576-1257-2-ND     MIC5205-3.0YM5 TR   150mA   3.0V   3.2V-16V   0.165V @ 150mA   576-1258-2-ND     MIC5205-3.3YM5 TR   150mA   3.3V   3.5V-16V   0.165V @ 150mA   576-1259-2-ND     TPS780330220   150mA   3.3V+2.2V   3.6-5.5V   250mV Max   296-23332-1-ND     TDA3663/N1,135   100mA   3.3V   3.5-45V   0.18V @ 50mA   568-5343-1-ND"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "VREG_SOT23-5_1_0"
+				(polyline
+					(pts
+						(xy -7.62 5.08) (xy 7.62 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 -5.08) (xy -7.62 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 5.08) (xy 7.62 -5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -5.08) (xy -7.62 -5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin bidirectional line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "IN"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 10.16 2.54 180)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "P4"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 157.48 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "59992773-82b1-4e8a-8235-095f92c1c009")
+	)
+	(junction
+		(at 165.1 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6376aa7c-3b00-45ff-8be4-665e60300e32")
+	)
+	(junction
+		(at 165.1 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8f4d5727-40a6-48e3-804d-f74e16ad2aa7")
+	)
+	(junction
+		(at 218.44 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "abf4ff83-ba12-4131-b59c-232f019d7594")
+	)
+	(junction
+		(at 64.77 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "acfeb00a-79e9-4b1f-9172-d23ecf2cc50f")
+	)
+	(junction
+		(at 64.77 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b178c135-6fde-4727-ac54-6821e47ea38f")
+	)
+	(junction
+		(at 157.48 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b2376af6-3bf2-4254-9ee6-254127adfb0e")
+	)
+	(junction
+		(at 100.33 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bfc9911d-5432-4dd2-8996-9c251df1f26b")
+	)
+	(junction
+		(at 172.72 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f6fc30e4-55d7-47ed-9bfe-7c3593b27da5")
+	)
+	(junction
+		(at 90.17 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fff31cae-d47c-47a6-9b0b-6145ccdbf4fb")
+	)
+	(wire
+		(pts
+			(xy 157.48 78.74) (xy 165.1 78.74)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "05672067-938c-41ca-92f9-d902ab2fb145")
+	)
+	(wire
+		(pts
+			(xy 218.44 104.14) (xy 218.44 91.44)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "09b643ce-9811-49dd-a1dc-f160c536d8d6")
+	)
+	(wire
+		(pts
+			(xy 63.5 91.44) (xy 63.5 86.36)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "0e080211-c6cb-4e0b-baaa-a4f78a7480ce")
+	)
+	(wire
+		(pts
+			(xy 54.61 119.38) (xy 54.61 121.92)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "11e938fa-785f-4255-8838-b8f02e3f76e3")
+	)
+	(wire
+		(pts
+			(xy 115.57 72.39) (xy 115.57 74.93)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "1254fb2a-6f5b-443e-9deb-57164c2724e3")
+	)
+	(wire
+		(pts
+			(xy 218.44 81.28) (xy 218.44 78.74)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "157c1fb8-e27a-4b31-b380-56065a1708bd")
+	)
+	(wire
+		(pts
+			(xy 67.31 119.38) (xy 64.77 119.38)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "1a237120-293a-4acb-b4a7-4f2bf0286ea1")
+	)
+	(wire
+		(pts
+			(xy 90.17 119.38) (xy 90.17 121.92)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "21348907-de2b-425d-8c72-c23c4baf8a17")
+	)
+	(wire
+		(pts
+			(xy 165.1 91.44) (xy 165.1 104.14)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "25a68521-2129-4893-bce8-b84ae5698506")
+	)
+	(wire
+		(pts
+			(xy 64.77 124.46) (xy 64.77 129.54)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "2a920500-a90f-4b66-8308-e4b5dddeeea2")
+	)
+	(wire
+		(pts
+			(xy 143.51 116.84) (xy 140.97 116.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "2ac8c927-3655-4eb7-a79f-523746847915")
+	)
+	(wire
+		(pts
+			(xy 163.83 116.84) (xy 166.37 116.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "2fb7ad1c-4b8f-47c8-b924-01525b42793c")
+	)
+	(wire
+		(pts
+			(xy 182.88 104.14) (xy 165.1 104.14)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "30d5350a-6ade-4604-8228-2344e9005c3c")
+	)
+	(wire
+		(pts
+			(xy 193.04 104.14) (xy 218.44 104.14)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "3391c90b-0e9c-455b-9aa6-b07b72169dc4")
+	)
+	(wire
+		(pts
+			(xy 76.2 101.6) (xy 60.96 101.6)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "39d9038a-bda4-4d09-9b87-95cdcb3845f9")
+	)
+	(wire
+		(pts
+			(xy 60.96 99.06) (xy 76.2 99.06)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "422a17c6-b5d9-48d3-9703-67a8ca73908e")
+	)
+	(wire
+		(pts
+			(xy 165.1 81.28) (xy 165.1 78.74)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4ccbeb5a-feb9-4a3f-9d08-b741e5aab4fd")
+	)
+	(wire
+		(pts
+			(xy 210.82 93.98) (xy 210.82 91.44)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4d0af9e3-d66b-41a1-a138-aafaaeee0788")
+	)
+	(wire
+		(pts
+			(xy 64.77 119.38) (xy 64.77 116.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4ef7b707-3c41-42ef-9e3a-af0572a4d775")
+	)
+	(wire
+		(pts
+			(xy 87.63 119.38) (xy 90.17 119.38)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4fa3ae52-fea2-4fc1-94fb-33b2688d2d21")
+	)
+	(wire
+		(pts
+			(xy 100.33 72.39) (xy 100.33 69.85)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "5d7ac7fc-9de6-4d21-abb7-bbb2af171070")
+	)
+	(wire
+		(pts
+			(xy 100.33 90.17) (xy 100.33 72.39)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "611e4549-e07e-4b62-87f7-cd2aa402944b")
+	)
+	(wire
+		(pts
+			(xy 86.36 88.9) (xy 86.36 93.98)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "6a84dd9a-dc8a-4c43-a962-ab4e91e0b0c5")
+	)
+	(wire
+		(pts
+			(xy 90.17 129.54) (xy 90.17 132.08)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "6c84f404-ef0e-4485-9c85-ff6a89cc3d23")
+	)
+	(wire
+		(pts
+			(xy 185.42 78.74) (xy 185.42 99.06)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "7cff043b-338b-4a17-93e9-646508a81c78")
+	)
+	(wire
+		(pts
+			(xy 140.97 90.17) (xy 128.27 90.17)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "7d900fc4-558e-4954-81a9-b4eb82652cad")
+	)
+	(wire
+		(pts
+			(xy 76.2 91.44) (xy 63.5 91.44)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "8195667c-e89a-440f-9141-d12fb736ccb7")
+	)
+	(wire
+		(pts
+			(xy 172.72 78.74) (xy 172.72 88.9)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "81bcb0b5-b009-478e-addf-1d0e0350d6f0")
+	)
+	(wire
+		(pts
+			(xy 170.18 93.98) (xy 157.48 93.98)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "828037ae-a6e8-4af7-876f-b52ecefd7c5a")
+	)
+	(wire
+		(pts
+			(xy 157.48 76.2) (xy 157.48 78.74)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "8546e5e5-37d7-43f4-bc7c-457700ab3174")
+	)
+	(wire
+		(pts
+			(xy 67.31 121.92) (xy 64.77 121.92)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "86db46d4-a605-4244-8931-a5f78aa46816")
+	)
+	(wire
+		(pts
+			(xy 76.2 96.52) (xy 60.96 96.52)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "86fb15b9-35b0-4273-b8d4-38f51074dd31")
+	)
+	(wire
+		(pts
+			(xy 64.77 119.38) (xy 54.61 119.38)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "8760db95-fc32-4b95-a87b-5134c1489bd8")
+	)
+	(wire
+		(pts
+			(xy 140.97 116.84) (xy 140.97 119.38)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "8ab9e65f-58f3-4b8f-9e0a-a49e113ee1ca")
+	)
+	(wire
+		(pts
+			(xy 64.77 121.92) (xy 64.77 119.38)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "998ab75b-ff18-4e32-9225-40db54e77756")
+	)
+	(wire
+		(pts
+			(xy 64.77 129.54) (xy 64.77 132.08)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "9f612ccf-63d4-4012-ba34-31e8e1b7524b")
+	)
+	(wire
+		(pts
+			(xy 157.48 93.98) (xy 144.78 93.98)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "9f96d087-1134-4c2e-9ed5-917e7de5c94b")
+	)
+	(wire
+		(pts
+			(xy 128.27 92.71) (xy 140.97 92.71)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "a6a1e296-e704-49e5-a31d-39093dd72ce1")
+	)
+	(wire
+		(pts
+			(xy 140.97 129.54) (xy 140.97 132.08)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "a7d337d2-e2ab-42fa-8c40-1cdc83812945")
+	)
+	(wire
+		(pts
+			(xy 153.67 116.84) (xy 151.13 116.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "a85482b6-d31b-495c-ad88-fb7b1c182104")
+	)
+	(wire
+		(pts
+			(xy 113.03 72.39) (xy 115.57 72.39)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "ab60b9d3-9b89-4dae-8e59-3ccee659e8bf")
+	)
+	(wire
+		(pts
+			(xy 135.89 127) (xy 118.11 127)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "af8ee346-1bd9-4908-8815-bf2b09beed27")
+	)
+	(wire
+		(pts
+			(xy 102.87 92.71) (xy 90.17 92.71)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b04fa02e-d1c7-4015-969e-7a8d5b6f2a90")
+	)
+	(wire
+		(pts
+			(xy 102.87 95.25) (xy 100.33 95.25)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b89497b0-8ba0-4781-a414-7310b9638d8f")
+	)
+	(wire
+		(pts
+			(xy 76.2 93.98) (xy 60.96 93.98)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b9ae76a3-953a-4290-975d-b794e96a0942")
+	)
+	(wire
+		(pts
+			(xy 210.82 81.28) (xy 210.82 78.74)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b9c82491-a387-443c-85ff-f2d45521448c")
+	)
+	(wire
+		(pts
+			(xy 67.31 124.46) (xy 64.77 124.46)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "befdca7e-db30-4bd8-ac67-70a08373b864")
+	)
+	(wire
+		(pts
+			(xy 76.2 86.36) (xy 68.58 86.36)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "c2f5c7bf-b38a-47c9-8b9a-59ca47415a06")
+	)
+	(wire
+		(pts
+			(xy 157.48 81.28) (xy 157.48 78.74)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "c453eb53-95d9-45c5-acc2-0f40f9ea07f0")
+	)
+	(wire
+		(pts
+			(xy 76.2 88.9) (xy 86.36 88.9)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "c73d4747-34c4-4ee5-a3d8-7cc973952563")
+	)
+	(wire
+		(pts
+			(xy 102.87 90.17) (xy 100.33 90.17)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "c975831a-68bb-40ae-9cd1-3a2ce964f638")
+	)
+	(wire
+		(pts
+			(xy 100.33 72.39) (xy 105.41 72.39)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "ceb00a54-d94c-41b3-b754-03759d66fcfc")
+	)
+	(wire
+		(pts
+			(xy 165.1 78.74) (xy 172.72 78.74)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "d1e91392-4976-4baf-86ac-7d22fb97e3e9")
+	)
+	(wire
+		(pts
+			(xy 90.17 119.38) (xy 90.17 116.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "da9f5282-2a5d-4ce9-876b-7cab74abcb4a")
+	)
+	(wire
+		(pts
+			(xy 68.58 86.36) (xy 68.58 83.82)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "dce81fd8-605c-4e1e-8c34-525ff096295b")
+	)
+	(wire
+		(pts
+			(xy 157.48 91.44) (xy 157.48 93.98)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "e4e3e979-08bc-4d3a-a12a-fed2e66db30d")
+	)
+	(wire
+		(pts
+			(xy 166.37 116.84) (xy 166.37 114.3)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "e7945a40-cd3d-4bba-bf1d-e01ac86b6b2a")
+	)
+	(wire
+		(pts
+			(xy 210.82 78.74) (xy 218.44 78.74)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "ef1877ec-6253-4e4b-ba70-7fe2ae117f86")
+	)
+	(wire
+		(pts
+			(xy 218.44 78.74) (xy 218.44 76.2)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "f2c57463-c0e6-4027-a025-eab00759d513")
+	)
+	(wire
+		(pts
+			(xy 165.1 104.14) (xy 144.78 104.14)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "f7a09d4e-c50a-4d37-9013-4c461f78e44c")
+	)
+	(wire
+		(pts
+			(xy 180.34 93.98) (xy 210.82 93.98)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "f9166ce3-bf5e-43ef-bc87-c4a7506d0b86")
+	)
+	(wire
+		(pts
+			(xy 100.33 95.25) (xy 100.33 97.79)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "fb4bfddb-fa86-4b03-8787-dd360186573e")
+	)
+	(wire
+		(pts
+			(xy 54.61 129.54) (xy 64.77 129.54)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "fc6e315a-a758-452c-997f-b2bd46673833")
+	)
+	(wire
+		(pts
+			(xy 172.72 78.74) (xy 185.42 78.74)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "ff9f3ace-6f10-4cfe-8f42-a791e198d0a1")
+	)
+	(label "LED_EN"
+		(at 123.19 127 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "1ba66255-33d2-4f8e-b6c9-df3f04eb1b64")
+	)
+	(label "SDA_3V"
+		(at 130.81 90.17 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "1bedfbef-c346-476a-8165-b239ad69825a")
+	)
+	(label "SCL_5V"
+		(at 195.58 104.14 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "547d61f3-dba3-4f03-88ee-433b743235ea")
+	)
+	(label "SCL_3V"
+		(at 90.17 92.71 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "6c256cc8-78c8-45a4-9517-f0343c0e6b56")
+	)
+	(label "INT"
+		(at 130.81 92.71 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "9a04d67b-1a21-4783-ba42-cd78dec0de3e")
+	)
+	(label "INT"
+		(at 60.96 99.06 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "9e0ec41d-b27d-4c66-86f8-0f699f56bb40")
+	)
+	(label "LED_EN"
+		(at 60.96 101.6 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "b90c4571-223f-4c82-b935-8c134a7e5149")
+	)
+	(label "SDA_3V"
+		(at 144.78 93.98 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "ddaee520-984c-4f5d-b74c-6015c0ae429a")
+	)
+	(label "SDA_5V"
+		(at 195.58 93.98 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "dec6f9af-fe32-4537-a39a-f116a128f4e7")
+	)
+	(label "SDA_5V"
+		(at 60.96 96.52 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "f195f411-51f6-44e3-9683-8ebde04610e6")
+	)
+	(label "SCL_5V"
+		(at 60.96 93.98 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "f9701954-d107-48f6-83d7-44ff07f3f075")
+	)
+	(label "SCL_3V"
+		(at 144.78 104.14 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "fbf4d53e-37d3-4d42-b428-3f1f7b4c2935")
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:RESISTOR_0805")
+		(at 158.75 116.84 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "01fa96d8-f5eb-42f4-ac7a-23fb5ad2992a")
+		(property "Reference" "R5"
+			(at 161.29 118.872 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "TBD"
+			(at 161.29 113.665 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:_0805"
+			(at 158.75 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 158.75 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 158.75 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "67c3a7a7-7b58-4cb4-8c64-dbe89d029bf0")
+		)
+		(pin "1"
+			(uuid "42fb3aae-811b-4f97-af7a-20c6f3259c9e")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:+3V3")
+		(at 118.11 114.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0493c27b-c0db-4485-997e-18dec4663f17")
+		(property "Reference" "#+3V6"
+			(at 118.11 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 115.57 119.38 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e54b1cc3-d3db-400b-81a6-8f6ae9700597")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "#+3V6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:GND")
+		(at 86.36 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0667c51c-a3ca-4cf6-8757-22537a2da569")
+		(property "Reference" "#U$17"
+			(at 86.36 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 84.836 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "220e2282-2b5f-46b4-8ca8-216ed4e53802")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "#U$17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:CAP_CERAMIC_0805")
+		(at 54.61 127 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0fa38dc6-baa8-4214-9bb4-80c7636e02a6")
+		(property "Reference" "C3"
+			(at 57.15 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "10µF"
+			(at 57.15 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:_0805"
+			(at 54.61 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.61 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 54.61 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "36661f17-4de4-4b83-bd7a-159cd19f7dfd")
+		)
+		(pin "2"
+			(uuid "0fc09285-7647-4493-b4ce-82b5426ab06a")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:MOSFET-NWIDE")
+		(at 187.96 101.6 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "13d9516a-c230-480c-a5cb-b083076bd75a")
+		(property "Reference" "Q2"
+			(at 188.595 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "BSS138"
+			(at 186.69 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:SOT23-WIDE"
+			(at 187.96 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 187.96 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "3395569a-47c1-4641-a7cc-204a308dadfb")
+		)
+		(pin "1"
+			(uuid "978b0c9c-4a7e-4198-9f22-2d27c046b743")
+		)
+		(pin "2"
+			(uuid "cae9a3e4-b279-4bd0-819b-457e70ff1fb4")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:+3V3")
+		(at 157.48 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "14daed49-5505-4e64-8d82-77b6c9d460c3")
+		(property "Reference" "#+3V4"
+			(at 157.48 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 154.94 78.74 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 157.48 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 157.48 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "34efa4f6-57c0-4866-bb6f-39e3a25fde40")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "#+3V4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:GND")
+		(at 115.57 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2fb60e41-1065-45cb-aa2a-40c924701e22")
+		(property "Reference" "#U$4"
+			(at 115.57 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 114.046 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 115.57 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 115.57 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "31146a8b-75b1-4adb-b166-42300a24a7ef")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "#U$4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:+3V3")
+		(at 90.17 114.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3e16d9d5-9caf-4bd2-9900-3e06384aca48")
+		(property "Reference" "#+3V2"
+			(at 90.17 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 87.63 119.38 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d2c1c51c-64bd-46e1-93a6-fd1accfbd970")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "#+3V2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:MOSFET-NWIDE")
+		(at 138.43 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3ec2016c-3e36-49b0-9061-ebf7dca33c21")
+		(property "Reference" "Q3"
+			(at 143.51 123.825 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "BSS138"
+			(at 143.51 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:SOT23-WIDE"
+			(at 138.43 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 138.43 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 138.43 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "fd85bd5f-8496-4824-82de-d54168b69188")
+		)
+		(pin "1"
+			(uuid "fd86098d-2848-4c40-8c05-98d8c222dab7")
+		)
+		(pin "3"
+			(uuid "bb5eba98-2868-4d56-b707-38b90551b7b0")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:LEDEV45-21")
+		(at 146.05 116.84 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "45fdfcd5-abf3-4c44-bfe9-9dde0f6b4475")
+		(property "Reference" "LED1"
+			(at 151.13 120.015 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "45-21/LK2C-B38452C4CB2/2T"
+			(at 151.13 114.046 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:EVERLIGHT_45-21"
+			(at 146.05 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 146.05 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "A"
+			(uuid "c68c36e6-fd93-4fc6-a567-0cc1cf9200b3")
+		)
+		(pin "K"
+			(uuid "d4096487-a25a-437b-9a99-fdde2ccb365d")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "LED1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:RESISTOR_0805")
+		(at 118.11 121.92 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5504a91a-3313-433b-9c9d-e3a5b3e3d59e")
+		(property "Reference" "R6"
+			(at 116.078 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "10K"
+			(at 121.285 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:_0805"
+			(at 118.11 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7bdd287c-d525-4882-aa5b-153206f0d07a")
+		)
+		(pin "2"
+			(uuid "12422e60-fb20-491d-bd8b-2b29553d8b33")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:VREG_SOT23-5")
+		(at 77.47 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "567a1feb-1e0b-469d-9ada-6a62e56763c8")
+		(property "Reference" "U2"
+			(at 69.85 115.824 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "RT9193"
+			(at 69.85 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:SOT23-5"
+			(at 77.47 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 77.47 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 77.47 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "45f3dd8d-2323-4057-8359-ae70efc4e62e")
+		)
+		(pin "3"
+			(uuid "4a787d94-abc3-4ac9-a755-554646f1c104")
+		)
+		(pin "2"
+			(uuid "e7b250c0-bc94-4c6f-bd8b-51ef40a34b75")
+		)
+		(pin "1"
+			(uuid "e09795f6-4fb2-4bb7-8755-32c67f397cac")
+		)
+		(pin "5"
+			(uuid "327d3ac3-799e-4079-8dca-833e78d5147f")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:GND")
+		(at 90.17 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "67705770-5b3b-4f34-b9ff-734ca4358ae1")
+		(property "Reference" "#U$7"
+			(at 90.17 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 88.646 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c2e09187-c04a-4a2f-a85b-44bb723cc9f6")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "#U$7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:GND")
+		(at 140.97 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6d5f39c8-333b-4ed9-9a48-d8c2ea82b54d")
+		(property "Reference" "#U$5"
+			(at 140.97 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 139.446 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 140.97 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "99d16311-121e-43e6-a386-66c7b1de775e")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "#U$5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:VIN")
+		(at 64.77 114.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7175a739-6775-4d6b-9b3c-923c6fda774a")
+		(property "Reference" "#U$11"
+			(at 64.77 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VIN"
+			(at 63.246 113.284 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 64.77 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 64.77 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 64.77 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dbc3b909-5a24-4c09-940d-f421c9211965")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "#U$11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:GND")
+		(at 64.77 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "778171c2-63bf-4621-a0d3-9d85ec951fb2")
+		(property "Reference" "#U$12"
+			(at 64.77 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 63.246 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 64.77 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 64.77 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 64.77 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b67c3b57-21dd-4ac6-b63f-66b5b7634cb3")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "#U$12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:RESISTOR_0805")
+		(at 157.48 86.36 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "87dd1fad-fe9a-4caa-a604-28850a7abfe8")
+		(property "Reference" "R2"
+			(at 155.448 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "10K"
+			(at 160.655 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:_0805"
+			(at 157.48 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 157.48 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cfdc8c59-282c-4e7f-8618-9850331f866b")
+		)
+		(pin "2"
+			(uuid "b6429f0c-066c-464d-8589-1f70c0846979")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:HEADER-1X770MIL")
+		(at 78.74 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8810b256-b49f-4a1b-a47e-34973a2f9faf")
+		(property "Reference" "JP1"
+			(at 72.39 83.185 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "HEADER-1X770MIL"
+			(at 72.39 106.68 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:1X07_ROUND_70"
+			(at 78.74 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 78.74 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "93640c1f-9645-4d82-9e68-8cc422ff73a0")
+		)
+		(pin "3"
+			(uuid "da860ee7-0d3b-4d88-827a-385386b25498")
+		)
+		(pin "5"
+			(uuid "b817086e-5ff9-4e4b-9245-59e5bcce8e50")
+		)
+		(pin "2"
+			(uuid "38a2fbd2-90cc-440c-a6fb-8d42e42ce225")
+		)
+		(pin "4"
+			(uuid "d0a82f38-130d-47e7-b4d9-96fc352ddb94")
+		)
+		(pin "6"
+			(uuid "51f39f5a-4b2b-41ac-9a4f-b3b0e326861a")
+		)
+		(pin "7"
+			(uuid "18a9ad93-c0b7-4daf-9e4d-93c15d2385f8")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "JP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:CAP_CERAMIC_0805")
+		(at 90.17 127 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9bb84bb9-793b-46f2-9f11-ed572e442d32")
+		(property "Reference" "C2"
+			(at 92.71 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "10µF"
+			(at 92.71 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:_0805"
+			(at 90.17 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f6d1a3ad-f2ff-4994-8185-6ed4e5f872df")
+		)
+		(pin "2"
+			(uuid "ac0aca61-91c7-4d85-a674-25d734ff8fed")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:FIDUCIAL{dblquote}{dblquote}")
+		(at 271.78 165.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9e4600ff-44fc-497f-80bc-eb0667551d54")
+		(property "Reference" "FID1"
+			(at 271.78 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "FIDUCIAL{dblquote}{dblquote}"
+			(at 271.78 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:FIDUCIAL_1MM"
+			(at 271.78 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 271.78 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 271.78 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "FID1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:MOSFET-NWIDE")
+		(at 175.26 91.44 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a00f8184-a1f8-442f-873e-6bc47b3abaae")
+		(property "Reference" "Q1"
+			(at 175.895 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "BSS138"
+			(at 173.99 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:SOT23-WIDE"
+			(at 175.26 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175.26 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 175.26 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "82bdd0cf-3de5-4cec-9dbc-c0b7d68d357f")
+		)
+		(pin "2"
+			(uuid "13624456-3a9b-4706-83cd-addd40f052ef")
+		)
+		(pin "1"
+			(uuid "10bb5ede-e6cb-4728-9b94-9a4127bc4477")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:RESISTOR_0805")
+		(at 165.1 86.36 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "adb69aff-2351-404a-b9e0-5faeff315cb5")
+		(property "Reference" "R1"
+			(at 163.068 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "10K"
+			(at 168.275 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:_0805"
+			(at 165.1 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 165.1 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "9124cf76-3f31-4fea-bc39-60ec7e197999")
+		)
+		(pin "1"
+			(uuid "9f986628-b1e4-4810-908c-a2d2cb285071")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:+3V3")
+		(at 100.33 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ae68a6a7-c4aa-4ef7-b352-32478e4b772f")
+		(property "Reference" "#+3V3"
+			(at 100.33 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 97.79 72.39 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.33 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "85f0bbfc-51d4-466b-b271-6ecda771d9d1")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "#+3V3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:CAP_CERAMIC_0805")
+		(at 110.49 72.39 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b5713ef1-4fa8-4171-a641-083240dddffe")
+		(property "Reference" "C1"
+			(at 107.95 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "0.1µF"
+			(at 110.49 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:_0805"
+			(at 110.49 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 110.49 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8de0a19b-e0c3-409b-ace2-c737df9741e8")
+		)
+		(pin "2"
+			(uuid "ff071e6f-24a8-4b4e-9c9c-150da3014caf")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:LIGHT_TCS3472")
+		(at 115.57 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b68671a7-c9ad-48cb-94ba-39675c034b7e")
+		(property "Reference" "U1"
+			(at 105.41 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "TCS34725"
+			(at 105.41 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:TCS3472_FN6"
+			(at 115.57 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 115.57 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "P$6"
+			(uuid "b3482308-e58e-4ab7-97c3-2eac6b576179")
+		)
+		(pin "P$1"
+			(uuid "edb372e3-edba-4979-82b2-a5ca1cf190e4")
+		)
+		(pin "P$4"
+			(uuid "c3c89130-76a7-4c84-8fce-1b5694a78102")
+		)
+		(pin "P$3"
+			(uuid "374c3dac-5799-4cee-8c36-6dc8701d7192")
+		)
+		(pin "P$2"
+			(uuid "cf16be8f-a126-49a2-be48-6ac39c4ec1a2")
+		)
+		(pin "P$5"
+			(uuid "6453206e-8d03-45ac-ae4d-f8de017960ef")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:MOUNTINGHOLE2.5")
+		(at 266.7 170.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "becb7b69-1a66-487c-89dc-371b49fd9e2f")
+		(property "Reference" "U$14"
+			(at 266.7 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MOUNTINGHOLE2.5"
+			(at 266.7 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:MOUNTINGHOLE_2.5_PLATED"
+			(at 266.7 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 266.7 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 266.7 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "U$14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:+3V3")
+		(at 166.37 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c06ea235-c836-48ad-8ac2-1163c332861e")
+		(property "Reference" "#+3V5"
+			(at 166.37 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 163.83 116.84 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 166.37 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 166.37 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 166.37 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8671491a-d0d0-4ec9-8f7e-f5ac1a4827f4")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "#+3V5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:VIN")
+		(at 218.44 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c56d21d8-8d90-4fa1-aea0-4ef02818d60b")
+		(property "Reference" "#U$10"
+			(at 218.44 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VIN"
+			(at 216.916 72.644 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 218.44 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 218.44 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 218.44 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3fcc0dd3-a137-4f90-b3dd-edf594cdc1e4")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "#U$10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:+3V3")
+		(at 63.5 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c9d5aa46-9b4e-464d-b578-5cd0e954b5ba")
+		(property "Reference" "#+3V7"
+			(at 63.5 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 60.96 88.9 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 63.5 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 63.5 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fba41af5-b98f-422d-aa29-dff686ca1755")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "#+3V7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:FIDUCIAL{dblquote}{dblquote}")
+		(at 266.7 165.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ca46b84a-d961-43a1-b3f6-6844edb77115")
+		(property "Reference" "FID2"
+			(at 266.7 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "FIDUCIAL{dblquote}{dblquote}"
+			(at 266.7 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:FIDUCIAL_1MM"
+			(at 266.7 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 266.7 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 266.7 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "FID2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:GND")
+		(at 100.33 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cbbc47e4-fc17-444b-bd37-7efa587fece1")
+		(property "Reference" "#U$3"
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 98.806 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1839b83a-be78-427d-8667-38f28d073cb1")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "#U$3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:VIN")
+		(at 68.58 81.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dd02c88a-6064-42af-a6dd-04e8d1d5ede0")
+		(property "Reference" "#U$15"
+			(at 68.58 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VIN"
+			(at 67.056 80.264 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 68.58 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 68.58 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f4d350ae-c006-4f3d-be37-ddefdce4329b")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "#U$15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:RESISTOR_0805")
+		(at 218.44 86.36 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e36c3768-8428-4142-afaf-9d09d7b1bb8b")
+		(property "Reference" "R4"
+			(at 216.408 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "10K"
+			(at 221.615 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:_0805"
+			(at 218.44 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 218.44 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 218.44 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "891673f1-ebf7-4562-9477-9a24d8cf951f")
+		)
+		(pin "1"
+			(uuid "5eeda8da-48b3-411d-a5ff-86d993f652d2")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:MOUNTINGHOLE2.5")
+		(at 271.78 170.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e7af2eb6-d3fa-45f3-9a3f-2825a422b744")
+		(property "Reference" "U$8"
+			(at 271.78 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MOUNTINGHOLE2.5"
+			(at 271.78 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:MOUNTINGHOLE_2.5_PLATED"
+			(at 271.78 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 271.78 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 271.78 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "U$8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TCS34725_schematic-eagle-import:RESISTOR_0805")
+		(at 210.82 86.36 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e87f73ad-d335-40dd-8811-c72b8f5b85cd")
+		(property "Reference" "R3"
+			(at 208.788 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "10K"
+			(at 213.995 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "TCS34725_schematic:_0805"
+			(at 210.82 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 210.82 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 210.82 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "691e7ced-2a9c-469d-9ff1-eb3bd04ffe59")
+		)
+		(pin "2"
+			(uuid "8523042a-788d-4833-86aa-9577895098a1")
+		)
+		(instances
+			(project ""
+				(path "/5793ca51-d44d-48f5-a7a1-75ec115e86c2"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
