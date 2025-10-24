@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Library")(type "KiCad")(uri "C:/Users/Jcarbonell3/Documents/GitHub/CMPE2750/software/Library.pretty")(options "")(descr ""))
+  (lib (name "TCS34725")(type "KiCad")(uri "C:/Users/Jcarbonell3/Documents/GitHub/CMPE2750/software/TCS34725.pretty")(options "")(descr ""))
+)
