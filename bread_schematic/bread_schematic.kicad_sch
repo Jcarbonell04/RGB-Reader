@@ -7,7 +7,7 @@
 	(title_block
 		(title "RGB Reader Breadboard Design (Proof of Life)")
 		(date "2025-10-21")
-		(rev "2")
+		(rev "3")
 		(company "NAIT")
 		(comment 1 "Jaedyn Carbonell (CMPE2750 Project)")
 	)
@@ -1385,10 +1385,10 @@
 		(uuid "8b340b79-840a-43ed-8a0c-0562a7989e58")
 	)
 	(junction
-		(at 57.15 35.56)
+		(at 59.69 35.56)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "7877f102-17dd-423b-bac3-452ad955d8e5")
+		(uuid "761a7387-7f36-4b8e-bd01-8ddcd044645b")
 	)
 	(junction
 		(at 57.15 33.02)
@@ -1532,18 +1532,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 60.96) (xy 57.15 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 0 0 255 1)
-		)
-		(uuid "351ba11a-1f66-4157-a774-ff300f072350")
-	)
-	(wire
-		(pts
-			(xy 57.15 35.56) (xy 57.15 33.02)
+			(xy 57.15 33.02) (xy 57.15 60.96)
 		)
 		(stroke
 			(width 0)
@@ -1642,7 +1631,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 35.56) (xy 57.15 35.56)
+			(xy 40.64 35.56) (xy 59.69 35.56)
 		)
 		(stroke
 			(width 0)
