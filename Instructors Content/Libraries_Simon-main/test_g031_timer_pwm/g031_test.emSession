@@ -63,7 +63,7 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="32" y="100" useTextEdit="1" path="main.c" left="0" selected="1" top="85" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="18" y="16" useTextEdit="1" path="main.c" left="0" selected="1" top="73" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="43" y="322" useTextEdit="1" path="STM32G0xx/Device/Include/stm32g031xx.h" left="0" top="309" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="g031_test" fileDialogDefaultFilter="*.c" autoConnectTarget="ST-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="D:/GitHub/STM32_Projects/lib" debugSearchPath="" autoConnectCapabilities="3455"/>

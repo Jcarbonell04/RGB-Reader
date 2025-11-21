@@ -88,7 +88,7 @@ void _OneTimeInits(void)
     _USART2_TxStringXY(1, 4, "I2C1 bus ready...");
 
     // Initialize OLED
-    _SSD1306_DispInit(_SSD1306_OR_UP);
+    _SSD1306_DispInit(_SSD1306_OR_DOWN);
     _SSD1306_DisplayOn();
     _SSD1306_Clear();
     _SSD1306_StringXY(0, 0, "OLED Ready");

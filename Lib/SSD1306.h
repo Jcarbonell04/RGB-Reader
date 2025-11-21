@@ -26,7 +26,7 @@
 typedef enum 
 {
   _SSD1306_OR_UP,
-  _SSD1306_OR_Down
+  _SSD1306_OR_DOWN
 } _SSD1306_Orientation;
 
 // management
