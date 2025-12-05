@@ -1,5 +1,5 @@
 Output/Debug/Obj/g031_test/TCS34725.o: \
-  C:\Users\jcarb\Documents\GitHub\CMPE2750\testing_TCS34725\TCS34725.c \
+  C:\Users\jcarb\Documents\GitHub\CMPE2750\TCS34725_getRawValues\TCS34725.c \
   ..\lib\tcs34725.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.24\include\stdint.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.24\include\__SEGGER_RTL.h \

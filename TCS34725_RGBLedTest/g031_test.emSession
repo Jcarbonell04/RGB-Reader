@@ -2,8 +2,7 @@
 <session>
  <Bookmarks/>
  <Breakpoints groups="Breakpoints" active_group="Breakpoints">
-  <BreakpointListItem trigger="" line="266" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" stopAll="false" group="Breakpoints" type="Breakpoint" state="4" filename="main.c" useHWbreakpoint="false"/>
-  <BreakpointListItem trigger="" line="56" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" stopAll="false" group="Breakpoints" type="Breakpoint" state="2" filename="main.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="211" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" stopAll="false" group="Breakpoints" type="Breakpoint" state="4" filename="main.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="1" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" stopAll="false" group="Breakpoints" type="Breakpoint" state="4" filename="TCS34725.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="29" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" stopAll="false" group="Breakpoints" type="Breakpoint" state="4" filename="../lib/TCS34725.h" useHWbreakpoint="false"/>
   <Exceptions set="HardFault"/>
@@ -71,20 +70,21 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="6" y="13" useTextEdit="1" path="main.c" left="0" selected="1" top="4" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="318" useTextEdit="1" path="../lib/i2c.c" left="0" top="295" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="41" useTextEdit="1" path="main.c" left="0" selected="1" top="29" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="318" useTextEdit="1" path="../lib/i2c.c" left="0" top="293" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="11" y="16" useTextEdit="1" path="../lib/SSD1306.c" left="0" top="14" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="17" y="27" useTextEdit="1" path="../lib/SSD1306.h" left="0" top="15" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="25" y="199" useTextEdit="1" path="SEGGER_THUMB_Startup.s" left="0" top="186" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="23" useTextEdit="1" path="../test_g031_i2c_oled_hello/main.c" left="0" top="6" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="19" y="25" useTextEdit="1" path="../lib/TCS34725.c" left="0" top="2" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="15" y="28" useTextEdit="1" path="../lib/TCS34725.h" left="0" top="22" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="15" y="28" useTextEdit="1" path="../lib/TCS34725.h" left="0" top="20" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="64" y="97" useTextEdit="1" path="STM32G0xx/Device/Include/stm32g0xx.h" left="0" top="94" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="28" useTextEdit="1" path="../lib/i2c.h" left="0" top="17" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="11" useTextEdit="1" path="TCS34725.c" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="SSD1306.c" left="0" top="91" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../lib/usart.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="85" useTextEdit="1" path="usart.c" left="0" top="67" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="85" useTextEdit="1" path="usart.c" left="0" top="66" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="8" y="2599" useTextEdit="1" path="STM32G0xx/Device/Include/stm32g031xx.h" left="0" top="2587" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="g031_test" fileDialogDefaultFilter="*.c" autoConnectTarget="ST-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/jcarb/Documents/GitHub/CMPE2750/lib" debugSearchPath="" autoConnectCapabilities="3455"/>
 </session>
