@@ -1,4 +1,4 @@
-# Project Proposal - RGB Reader (I dont have a cool name </3)
+# Project Proposal - RGB Reader
 
 **Abstract**
 
