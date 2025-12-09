@@ -23,7 +23,6 @@ TCS34725_t colourSensor;
 
 const uint16_t PWM_MAX = 63999;
 
-// SCALE RAW SENSOR VALUE TO PWM RANGE
 uint16_t ScaleToPWM(uint16_t val, uint16_t clear)
 {
     if (clear == 0) return 0;
@@ -95,6 +94,10 @@ int main(void)
 // -----------------------------------------------------
 void _OneTimeInits(void)
 {
+    RCC->APBENR2 |= RCC_APBENR2_SYSCFGEN;
+    SYSCFG->CFGR1 |= SYSCFG_CFGR1_PA11_RMP;
+    SYSCFG->CFGR1 |= SYSCFG_CFGR1_PA12_RMP;
+
     // GPIOA Clock
     RCC->IOPENR |= RCC_IOPENR_GPIOAEN;
 

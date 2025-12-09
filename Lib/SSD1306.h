@@ -14,12 +14,12 @@
 #endif
 
 // comment in/out the appropriate size of your display! ****
-#ifndef _SSD1306_DisplaySize128x32
-#define _SSD1306_DisplaySize128x32
-#endif
-//#ifndef _SSD1306_DisplaySize128x64
-//#define _SSD1306_DisplaySize128x64
+//#ifndef _SSD1306_DisplaySize128x32
+//#define _SSD1306_DisplaySize128x32
 //#endif
+#ifndef _SSD1306_DisplaySize128x64
+#define _SSD1306_DisplaySize128x64
+#endif
 // comment in/out the appropriate size of your display! ****
 
 // screen orientation
