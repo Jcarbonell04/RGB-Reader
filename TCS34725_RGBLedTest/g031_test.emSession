@@ -84,7 +84,7 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../lib/usart.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="1" y="85" useTextEdit="1" path="usart.c" left="0" top="66" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="8" y="2599" useTextEdit="1" path="STM32G0xx/Device/Include/stm32g031xx.h" left="0" top="2587" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="40" useTextEdit="1" path="main.c" left="0" selected="1" top="28" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="40" useTextEdit="1" path="main.c" left="0" selected="1" top="91" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="g031_test" fileDialogDefaultFilter="*.c" autoConnectTarget="ST-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/jcarb/Documents/GitHub/CMPE2750/lib" debugSearchPath="" autoConnectCapabilities="3455"/>
 </session>

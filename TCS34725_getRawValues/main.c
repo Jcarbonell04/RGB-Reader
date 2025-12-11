@@ -1,8 +1,8 @@
-// Testing Lib - Reading RGB values on SSD1306 (OLED) from TCS34725 (colour sensor)
+// Testing Lib   Reading RGB values on SSD1306 (OLED) from TCS34725 (colour sensor)
 // Core clock: 64MHz
 //
 // Requires I2C1 on PB6/PB7 (SCL/SDA)
-// I2C Bus pull-ups required.
+// I2C Bus pull ups required.
 //
 
 #include "stm32g031xx.h"
@@ -20,35 +20,105 @@ void _OneTimeInits(void);
 TCS34725_t colourSensor;
 
 // SIMPLE COLOUR CLASSIFICATION
+//const char* GetColourName(uint8_t r, uint8_t g, uint8_t b, uint16_t c)
+//{
+//    // very low brightness → dark
+//    if (c < 200)
+//        return "DARK";
+
+//    // normalize to brightness
+//    float rn = (float)r / 255.0f;
+//    float gn = (float)g / 255.0f;
+//    float bn = (float)b / 255.0f;
+
+//    // dominant channel detection
+//    if (rn > gn && rn > bn)
+//        return "RED";
+//    if (gn > rn && gn > bn)
+//        return "GREEN";
+//    if (bn > rn && bn > gn)
+//        return "BLUE";
+//    if (rn > bn && gn > bn)
+//        return "YELLOW";
+
+//    // bright and balanced → white
+//    if (rn > 0.30f && gn > 0.30f && bn > 0.30f)
+//        return "WHITE";
+
+//    return "UNKNOWN";
+//}
+
+
 const char* GetColourName(uint8_t r, uint8_t g, uint8_t b, uint16_t c)
 {
-    // very low brightness → dark
-    if (c < 200)
-        return "DARK";
+    //       DARK → BLACK      
+    if (c < 120)
+        return "BLACK";
 
-    // normalize to brightness
-    float rn = (float)r / 255.0f;
-    float gn = (float)g / 255.0f;
-    float bn = (float)b / 255.0f;
+    // convert
+    float rf = r / 255.0f;
+    float gf = g / 255.0f;
+    float bf = b / 255.0f;
 
-    // dominant channel detection
-    if (rn > gn && rn > bn)
-        return "RED";
-    if (gn > rn && gn > bn)
-        return "GREEN";
-    if (bn > rn && bn > gn)
-        return "BLUE";
-    if (rn > bn && gn > bn)
+    // WHITE
+    if (rf > 0.7f && gf > 0.7f && bf > 0.7f)
+        return "WHITE";
+
+    // GRAY
+    float maxc = rf;
+    if (gf > maxc) maxc = gf;
+    if (bf > maxc) maxc = bf;
+
+    float minc = rf;
+    if (gf < minc) minc = gf;
+    if (bf < minc) minc = bf;
+
+    if ((maxc - minc) < 0.10f)
+        return "GRAY";
+
+    // YELLOW
+    if (rf > 0.4f && gf > 0.4f && bf < 0.3f)
         return "YELLOW";
 
-    // bright and balanced → white
-    if (rn > 0.30f && gn > 0.30f && bn > 0.30f)
-        return "WHITE";
+    // ORANGE      
+    if (rf > 0.55f && gf > 0.3f && bf < 0.2f)
+        return "ORANGE";
+
+    // PINK      
+    if (rf > 0.6f && bf > 0.35f && gf < 0.5f)
+        return "PINK";
+
+    // BROWN      
+    if (rf > 0.4f && gf > 0.2f && bf < 0.15f)
+        return "BROWN";
+
+    // CYAN      
+    if (gf > 0.3f && bf > 0.3f)
+        return "CYAN";
+
+    // PURPLE      
+    if (rf > 0.3f && bf > 0.3f)
+        return "PURPLE";
+    
+    // RED      
+    if (rf > gf && rf > bf)
+        return "RED";
+
+    // GREEN      
+    if (gf > rf && gf > bf)
+        return "GREEN";
+
+    // BLUE     
+    if (bf > rf && bf > gf)
+        return "BLUE";
+
 
     return "UNKNOWN";
 }
 
-// -----------------------------------------------------
+
+
+//                                                      
 int main(void)
 {
     _PLL_To_64();
@@ -91,31 +161,25 @@ int main(void)
 
         const char* colourName = GetColourName(r8, g8, b8, c);
 
-        r8 = r/257;
-        g8 = g/257;
-        b8 = b/257;
-
         _SSD1306_Clear();
 
-        sprintf(buff, "R:%3u", r8);
-        _SSD1306_StringXY(0, 0, buff);
+        // HEADER
+        _SSD1306_StringXY(0, 0, "Reading Colour Values");
+        _SSD1306_StringXY(0, 1, "~~~~~~~~~~~~~~~~~~~~~");
 
-        sprintf(buff, "G:%3u", g8);
-        _SSD1306_StringXY(0, 1, buff);
-
-        sprintf(buff, "B:%3u", b8);
+        // Channel Values
+        sprintf(buff, "R:%3u G:%3u B:%3u \r\n", r8, g8, b8);
         _SSD1306_StringXY(0, 2, buff);
 
-        //sprintf(buff, "C:%5u", c);
-        //_SSD1306_StringXY(0, 4, buff);
-
-        sprintf(buff, "hex: %x%x%x \r\n", r8, g8, b8);
+        // HEX
+        sprintf(buff, "Hex: %02x%02x%02x \r\n", r8, g8, b8);
         _SSD1306_StringXY(0, 4, buff);
 
-        sprintf(buff, "Detected: %s", colourName);
+        // NAME
+        sprintf(buff, "Name: %s", colourName);
         _SSD1306_StringXY(0, 6, buff);
 
-        
+        _SSD1306_StringXY(0, 7, "                 jarb");
 
         _SSD1306_Render();
 
@@ -127,11 +191,11 @@ int main(void)
     }
 }
 
-// -----------------------------------------------------
+//                                                      
 void _OneTimeInits(void)
 {
     // Turn on GPIO clock for Port A (needed for USART)
-    RCC->IOPENR |= RCC_IOPENR_GPIOAEN;
+    RCC -> IOPENR |= RCC_IOPENR_GPIOAEN;
 
     // Initialize serial at 38400 baud
     _USART2_Init(64E6, 38400);
@@ -164,11 +228,11 @@ void _OneTimeInits(void)
 
 
 
-//// Testing Lib - Reading RGB values on SSD1306 (OLED) from TCS34725 (colour sensor)
+//// Testing Lib   Reading RGB values on SSD1306 (OLED) from TCS34725 (colour sensor)
 //// Core clock: 64MHz
 ////
 //// Requires I2C1 on PB6/PB7 (SCL/SDA)
-//// I2C Bus pull-ups required.
+//// I2C Bus pull ups required.
 ////
 
 //#include "stm32g031xx.h"
@@ -214,7 +278,7 @@ void _OneTimeInits(void)
 //    return "UNKNOWN";
 //}
 
-//// -----------------------------------------------------
+////                                                      
 //int main(void)
 //{
 //    _PLL_To_64();
@@ -275,11 +339,11 @@ void _OneTimeInits(void)
 //    }
 //}
 
-//// -----------------------------------------------------
+////                                                      
 //void _OneTimeInits(void)
 //{
 //    // Turn on GPIO clock for Port A (needed for USART)
-//    RCC->IOPENR |= RCC_IOPENR_GPIOAEN;
+//    RCC >IOPENR |= RCC_IOPENR_GPIOAEN;
 
 //    // Initialize serial at 38400 baud
 //    _USART2_Init(64E6, 38400);
@@ -320,11 +384,11 @@ void _OneTimeInits(void)
 
 
 
-//// Testing Lib - Reading RGB values on SSD1306 (OLED) from TCS34725 (colour sensor)
+//// Testing Lib   Reading RGB values on SSD1306 (OLED) from TCS34725 (colour sensor)
 //// Core clock: 64MHz
 ////
 //// Requires I2C1 on PB6/PB7 (SCL/SDA)
-//// I2C Bus pull-ups required.
+//// I2C Bus pull ups required.
 ////
 
 //#include "stm32g031xx.h"
@@ -341,7 +405,7 @@ void _OneTimeInits(void)
 
 //TCS34725_t colourSensor;
 
-//// -----------------------------------------------------
+////                                                      
 //int main(void)
 //{
 //    _PLL_To_64();
@@ -391,11 +455,11 @@ void _OneTimeInits(void)
 //    }
 //}
 
-//// -----------------------------------------------------
+////                                                      
 //void _OneTimeInits(void)
 //{
 //    // Turn on GPIO clock for Port A (needed for USART)
-//    RCC->IOPENR |= RCC_IOPENR_GPIOAEN;
+//    RCC >IOPENR |= RCC_IOPENR_GPIOAEN;
 
 //    // Initialize serial at 38400 baud
 //    _USART2_Init(64E6, 38400);
