@@ -48,18 +48,18 @@ Week 1-2:
 - [x] Procure proof-of-life components (MCU carrier, battery options)
 
 Week 3-4:
-- [ ] Assemble proof-of-life components
-- [ ] Master toolchain, begin software development
+- [x] Assemble proof-of-life components
+- [x] Master toolchain, begin software development
 
 Week 5-6:
-- [ ] Finalize design, complete initial software design
+- [x] Finalize design, complete initial software design
 
 Week 7-9:
-- [ ] Complete PCB design, software essentially complete
-- [ ] Complete dimensions for case know, begin 3D case design around PCB dimensions
+- [x] Complete PCB design, software essentially complete
+- [x] Complete dimensions for case know, begin 3D case design around PCB dimensions
 
 Week 10:
-- [ ] Send out PCB design for manufacture
+- [x] Send out PCB design for manufacture
 
 When PCBs arrive:
 - [ ] assemble, program, and test with current software.
