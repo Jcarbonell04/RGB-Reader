@@ -62,7 +62,7 @@ Week 10:
 - [x] Send out PCB design for manufacture
 
 When PCBs arrive:
-- [ ] assemble, program, and test with current software.
-- [ ] complete added features, assemble into case
+- [x] assemble, program, and test with current software.
+- [x] complete added features, assemble into case
 
-Check-off!
+Finished Dec 12 2025!
