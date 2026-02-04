@@ -43,8 +43,8 @@ The PCB will include the main components listed earlier. The only difference bet
 
 **Unpopulated PCB Photos**
 
-<img width="1061" height="1280" alt="image" src="https://github.com/user-attachments/assets/54e98bd3-ac96-42f9-8c12-bd65687e4d98" />
-<img width="1061" height="1280" alt="image" src="https://github.com/user-attachments/assets/47cee29b-9ade-4c23-b42e-2633fe9e5aba" />
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/54e98bd3-ac96-42f9-8c12-bd65687e4d98" />
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/47cee29b-9ade-4c23-b42e-2633fe9e5aba" />
 
 
 
