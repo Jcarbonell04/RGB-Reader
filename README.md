@@ -41,6 +41,13 @@ For my Final build, I would like to design and 3D Print a case for my RGB Reader
 
 The PCB will include the main components listed earlier. The only difference between the PCB build and the proof of life build the use of the Nucleo development board in the breadboard version. I will have to design my PCB and case to allocate space for the programmer, and other parts needed for it to work. More research needs to be done before I get to the case desgining.
 
+**Unpopulated PCB Photos**
+
+<img width="1061" height="1280" alt="image" src="https://github.com/user-attachments/assets/54e98bd3-ac96-42f9-8c12-bd65687e4d98" />
+<img width="1061" height="1280" alt="image" src="https://github.com/user-attachments/assets/47cee29b-9ade-4c23-b42e-2633fe9e5aba" />
+
+
+
 **Schedule**
 
 Week 1-2:
